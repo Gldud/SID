@@ -13,7 +13,8 @@ module.exports = function(grunt) {
           'public/company-profile/business-type/style.css': 'public/company-profile/business-type/style.less',
           'public/company-profile/company-info/basic/style.css' : 'public/company-profile/company-info/basic/style.less',
           'public/transaction-document/style.css' : 'public/transaction-document/style.less',
-          'public/market/style.css' : 'public/market/main.less'
+          'public/market/style.css' : 'public/market/main.less',
+          'public/market-m/style.css' : 'public/market/style.less'
         }
       }
     },
