@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>Trade Details</title>
+</head>
+
+<body>
+  <div class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- panel 시작 -->
+          <div class="panel">
+            <!-- panel-heading 시작-->
+            <div class="panel-heading">
+              <h1>Manage Company Information</h1>
+            </div>
+            <!-- panel-body 시작 -->
+            <div class="panel-body">
+              <!-- form -->
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="inc_total_annual_revenue" class="col-sm-3">@DbRes.T("Total Annual Revenue","계정.회사정보.필드")</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" id="inc_total_annual_revenue" name="inc_total_annual_revenue">
+                      <option value="">--please select--</option>
+											<option value="1" >Below US$1 Million</option>
+											<option value="2" >US$1 Million - US$2.5 Million</option>
+											<option value="3" >US$2.5 Million - US$5 Million</option>
+											<option value="4" >US$5 Million - US$10 Million</option>
+											<option value="5" >US$10 Million - US$50 Million</option>
+											<option value="6" >US$50 Million - US$100 Million</option>
+											<option value="7" >Above US$100 Million</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inc_export_percentage" class="col-sm-3">@DbRes.T("Export Percentage","계정.회사정보.필드")</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" id="inc_export_percentage" name="inc_export_percentage">
+                      <option value="">--please select--</option>
+											<option value="1" >1% - 10%</option>
+											<option value="2" >11% - 20%</option>
+											<option value="3" >21% - 30%</option>
+											<option value="4" >31% - 40%</option>
+											<option value="5" >41% - 50%</option>
+											<option value="6" >51% - 60%</option>
+											<option value="7" >61% - 70%</option>
+											<option value="8" >71% - 80%</option>
+											<option value="9" >81% - 90%</option>
+											<option value="10" >91% - 100%</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group main-markets">
+                  <label for="" class="col-sm-3">@DbRes.T("Main Markets and Distribution","계정.회사정보.필드")</label>
+                  <div class="col-sm-9">
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                        <span class="percent">70%</span>
+                      </div>
+                    </div>
+                    <div class="">
+                      <ul style="list-style:none; padding-left:0;">
+                        <li>
+                          <input type="text" class="form-control" id="inc_market_northamerica" name="inc_market_northamerica" value="0">
+                          <span class="percent-wrap">%</span>
+                          <label for="inc_market_northamerica">@DbRes.T("North America","지역화.기준.대륙")</label>
+                        </li>
+                        <li>
+                          <input type="text" class="form-control" id="inc_market_southamerica" name="inc_market_southamerica" value="0">
+                          <span class="percent-wrap">%</span>
+                          <label for="inc_market_southamerica">@DbRes.T("South America","지역화.기준.대륙")</label>
+                        </li>
+                        <li>
+                          <input type="text" class="form-control" id="inc_market_easterneurope" name="inc_market_easterneurope" value="0">
+                          <span class="percent-wrap">%</span>
+                          <label for="inc_market_easterneurope">@DbRes.T("Eastern Europe","지역화.기준.대륙")</label>
+                        </li>
+                        <li>
+                          <input type="text" class="form-control" id="inc_market_southeastasia" name="inc_market_southeastasia" value="0">
+                          <span class="percent-wrap">%</span>
+                          <label for="inc_market_southeastasia">@DbRes.T("Southeast Asia","지역화.기준.대륙")</label>
+                        </li>
+                        <li>
+                          <input type="text" class="form-control" id="inc_market_africa" name="inc_market_africa" value="0">
+                          <span class="percent-wrap">%</span>
+                          <label for="inc_market_africa">@DbRes.T("Africa","지역화.기준.대륙")</label>
+                        </li>
+                        <li>
+                          <input type="text" class="form-control" id="inc_market_oceania" name="inc_market_oceania" value="0">
+                          <span class="percent-wrap">%</span>
+                          <label for="inc_market_oceania">@DbRes.T("Oceania","지역화.기준.대륙")</label>
+                        </li>
+                        <li>
+                          <input type="text" class="form-control" id="inc_market_mideast" name="inc_market_mideast" value="0">
+                          <span class="percent-wrap">%</span>
+                          <label for="inc_market_mideast">@DbRes.T("Mid East","지역화.기준.대륙")</label>
+                        </li>
+                        <li>
+                          <input type="text" class="form-control" id="inc_market_easternasia" name="inc_market_easternasia" value="0">
+                          <span class="percent-wrap">%</span>
+                          <label for="inc_market_easternasia">@DbRes.T("Eastern Asiac","지역화.기준.대륙")</label>
+                        </li>
+                        <li>
+                          <input type="text" class="form-control" id="inc_market_westerneurope" name="inc_market_westerneurope" value="0">
+                          <span class="percent-wrap">%</span>
+                          <label for="inc_market_westerneurope">@DbRes.T("Western Europe","지역화.기준.대륙")</label>
+                        </li>
+                        <li>
+                          <input type="text" class="form-control" id="inc_market_northamerica" name="inc_market_northamerica" value="0">
+                          <span class="percent-wrap">%</span>
+                          <label for="inc_market_northamerica">@DbRes.T("North America","지역화.기준.대륙")</label>
+                        </li>
+                        <li>
+                          <input type="text" class="form-control" id="inc_market_centralamerica" name="inc_market_centralamerica" value="0">
+                          <span class="percent-wrap">%</span>
+                          <label for="inc_market_centralamerica">@DbRes.T("Central America","지역화.기준.대륙")</label>
+                        </li>
+                        <li>
+                          <input type="text" class="form-control" id="inc_market_northerneurope" name="inc_market_northerneurope" value="0">
+                          <span class="percent-wrap">%</span>
+                          <label for="inc_market_northerneurope">@DbRes.T("Northern Europe","지역화.기준.대륙")</label>
+                        </li>
+                        <li>
+                          <input type="text" class="form-control" id="inc_market_southerneurope" name="inc_market_southerneurope" value="0">
+                          <span class="percent-wrap">%</span>
+                          <label for="inc_market_southerneurope">@DbRes.T("Southern Europe","지역화.기준.대륙")</label>
+                        </li>
+                        <li>
+                          <input type="text" class="form-control" id="inc_market_southasia" name="inc_market_southasia" value="0">
+                          <span class="percent-wrap">%</span>
+                          <label for="inc_market_southasia">@DbRes.T("South Asia","지역화.기준.대륙")</label>
+                        </li>
+                        <li>
+                          <input type="text" class="form-control" id="inc_market_domesticmarket" name="inc_market_domesticmarket" value="0">
+                          <span class="percent-wrap">%</span>
+                          <label for="inc_market_domesticmarket">@DbRes.T("Domestic Market","지역화.기준.대륙")</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inc_exporting_year" class="col-sm-3">@DbRes.T("Year when your company started exporting","계정.회사정보.필드")</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" id="inc_exporting_year" name="inc_exporting_year">
+                        <option value="">--- Please select ---</option>
+      									<option value="2017">2017</option>
+      									<option value="2016">2016</option>
+      									<option value="2015">2015</option>
+      									<option value="2014">2014</option>
+      									<option value="2013">2013</option>
+      									<option value="2012">2012</option>
+      									<option value="2011">2011</option>
+      									<option value="2010">2010</option>
+                        <option value="2009">2009</option>
+      									<option value="2008">2008</option>
+      									<option value="2007">2007</option>
+      									<option value="2006">2006</option>
+      									<option value="2005">2005</option>
+      									<option value="2004">2004</option>
+      									<option value="2003">2003</option>
+      									<option value="2002">2002</option>
+      									<option value="2001">2001</option>
+      									<option value="2000">2000</option>
+      									<option value="1999">1999</option>
+      									<option value="1998">1998</option>
+      									<option value="1997">1997</option>
+      									<option value="1996">1996</option>
+      									<option value="1995">1995</option>
+                        <option value="1994">1994</option>
+      									<option value="1993">1993</option>
+      									<option value="1992">1992</option>
+      									<option value="1991">1991</option>
+      									<option value="1990">1990</option>
+      									<option value="1989">1989</option>
+      									<option value="1988">1988</option>
+      									<option value="1987">1987</option>
+      									<option value="1986">1986</option>
+      									<option value="1985">1985</option>
+      									<option value="1984">1984</option>
+      									<option value="1983">1983</option>
+      									<option value="1982">1982</option>
+      									<option value="1981">1981</option>
+      									<option value="1980">1980</option>
+      									<option value="1979">1979</option>
+      									<option value="1978">1978</option>
+      									<option value="1977">1977</option>
+      									<option value="1976">1976</option>
+      									<option value="1975">1975</option>
+      									<option value="1974">1974</option>
+      									<option value="1973">1973</option>
+                        <option value="1972">1972</option>
+      									<option value="1971">1971</option>
+      									<option value="1970">1970</option>
+      									<option value="1969">1969</option>
+      									<option value="1968">1968</option>
+      									<option value="1967">1967</option>
+      									<option value="1966">1966</option>
+      									<option value="1965">1965</option>
+      									<option value="1964">1964</option>
+      									<option value="1963">1963</option>
+      									<option value="1962">1962</option>
+      									<option value="1961">1961</option>
+      									<option value="1960">1960</option>
+      									<option value="1959">1959</option>
+      									<option value="1958">1958</option>
+      									<option value="1957">1957</option>
+      									<option value="1956">1956</option>
+      									<option value="1955">1955</option>
+      									<option value="1954">1954</option>
+      									<option value="1953">1953</option>
+      									<option value="1952">1952</option>
+                        <option value="1950">1950</option>
+      									<option value="1949">1949</option>
+      									<option value="1948">1948</option>
+      									<option value="1947">1947</option>
+      									<option value="1946">1946</option>
+      									<option value="1945">1945</option>
+      									<option value="1944">1944</option>
+      									<option value="1943">1943</option>
+      									<option value="1942">1942</option>
+      									<option value="1941">1941</option>
+      									<option value="1940">1940</option>
+      									<option value="1939">1939</option>
+      									<option value="1938">1938</option>
+      									<option value="1937">1937</option>
+      									<option value="1936">1936</option>
+      									<option value="1935">1935</option>
+      									<option value="1934">1934</option>
+      									<option value="1933">1933</option>
+      									<option value="1932">1932</option>
+      									<option value="1931">1931</option>
+      									<option value="1930">1930</option>
+      									<option value="1929">1929</option>
+                        <option value="1928">1928</option>
+      									<option value="1927">1927</option>
+      									<option value="1926">1926</option>
+      									<option value="1925">1925</option>
+      									<option value="1924">1924</option>
+      									<option value="1923">1923</option>
+      									<option value="1922">1922</option>
+      									<option value="1921">1921</option>
+      									<option value="1920">1920</option>
+      									<option value="1919">1919</option>
+      									<option value="1918">1918</option>
+      									<option value="1917">1917</option>
+      									<option value="1916">1916</option>
+      									<option value="1915">1915</option>
+      									<option value="1914">1914</option>
+      									<option value="1913">1913</option>
+      									<option value="1912">1912</option>
+      									<option value="1911">1911</option>
+                        <option value="1910">1910</option>
+      									<option value="1909">1909</option>
+      									<option value="1908">1908</option>
+      									<option value="1907">1907</option>
+      									<option value="1906">1906</option>
+      									<option value="1905">1905</option>
+      									<option value="1904">1904</option>
+      									<option value="1903">1903</option>
+      									<option value="1902">1902</option>
+      									<option value="1901">1901</option>
+      									<option value="1900">1900</option>
+      									<option value="1899">1899</option>
+      									<option value="1898">1898</option>
+      									<option value="1897">1897</option>
+      									<option value="1896">1896</option>
+      									<option value="1895">1895</option>
+      									<option value="1894">1894</option>
+      									<option value="1893">1893</option>
+      									<option value="1892">1892</option>
+      									<option value="1891">1891</option>
+      									<option value="1890">1890</option>
+      									<option value="1889">1889</option>
+      									<option value="1888">1888</option>
+      									<option value="1887">1887</option>
+      									<option value="1886">1886</option>
+      									<option value="1885">1885</option>
+      									<option value="1884">1884</option>
+      									<option value="1883">1883</option>
+      									<option value="1882">1882</option>
+      									<option value="1881">1881</option>
+      									<option value="1880">1880</option>
+      									<option value="1879">1879</option>
+      									<option value="1878">1878</option>
+      									<option value="1877">1877</option>
+      									<option value="1876">1876</option>
+      									<option value="1875">1875</option>
+      									<option value="1874">1874</option>
+      									<option value="1873">1873</option>
+      									<option value="1872">1872</option>
+      									<option value="1871">1871</option>
+      									<option value="1870">1870</option>
+      									<option value="1869">1869</option>
+      									<option value="1868">1868</option>
+      									<option value="1867">1867</option>
+      									<option value="1866">1866</option>
+      									<option value="1865">1865</option>
+      									<option value="1864">1864</option>
+      									<option value="1863">1863</option>
+      									<option value="1862">1862</option>
+      									<option value="1861">1861</option>
+      									<option value="1860">1860</option>
+      									<option value="1859">1859</option>
+      									<option value="1858">1858</option>
+      									<option value="1857">1857</option>
+      									<option value="1856">1856</option>
+      									<option value="1855">1855</option>
+      									<option value="1854">1854</option>
+      									<option value="1853">1853</option>
+      									<option value="1852">1852</option>
+      									<option value="1851">1851</option>
+      									<option value="1850">1850</option>
+      									<option value="1849">1849</option>
+      									<option value="1848">1848</option>
+      									<option value="1847">1847</option>
+      									<option value="1846">1846</option>
+      									<option value="1845">1845</option>
+      									<option value="1844">1844</option>
+      									<option value="1843">1843</option>
+      									<option value="1842">1842</option>
+      									<option value="1841">1841</option>
+      									<option value="1840">1840</option>
+      									<option value="1839">1839</option>
+      									<option value="1838">1838</option>
+      									<option value="1837">1837</option>
+      									<option value="1836">1836</option>
+      									<option value="1835">1835</option>
+      									<option value="1834">1834</option>
+      									<option value="1833">1833</option>
+      									<option value="1832">1832</option>
+      									<option value="1831">1831</option>
+      									<option value="1830">1830</option>
+      									<option value="1829">1829</option>
+      									<option value="1828">1828</option>
+      									<option value="1827">1827</option>
+      									<option value="1826">1826</option>
+      									<option value="1825">1825</option>
+      									<option value="1824">1824</option>
+      									<option value="1823">1823</option>
+      									<option value="1822">1822</option>
+      									<option value="1821">1821</option>
+      									<option value="1820">1820</option>
+      									<option value="1819">1819</option>
+      									<option value="1818">1818</option>
+      									<option value="1817">1817</option>
+      									<option value="1816">1816</option>
+      									<option value="1815">1815</option>
+      									<option value="1814">1814</option>
+      									<option value="1813">1813</option>
+      									<option value="1812">1812</option>
+      									<option value="1811">1811</option>
+      									<option value="1810">1810</option>
+      									<option value="1809">1809</option>
+      									<option value="1808">1808</option>
+      									<option value="1807">1807</option>
+      									<option value="1806">1806</option>
+      									<option value="1805">1805</option>
+      									<option value="1804">1804</option>
+      									<option value="1803">1803</option>
+      									<option value="1802">1802</option>
+      									<option value="1801">1801</option>
+      									<option value="1800">1800</option>
+                      </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3">@DbRes.T("Add customer details","계정.회사정보.필드")</label>
+                  <div class="col-sm-9">
+                    <div class="radio">
+                      <label for="inc_add_customer_datails_yes"><input type="radio" id="inc_add_customer_datails_yes" name="inc_add_customer_datails" value="yes">Yes</label>
+                    </div>
+                    <div class="radio">
+                      <label for="inc_add_customer_datails_no"><input type="radio" id="inc_add_customer_datails_no" name="inc_add_customer_datails" value="no">No</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inc_trade_staff_number" class="col-sm-3">@DbRes.T("No. of Employees in Trade Department","계정.회사정보.필드")</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" id="inc_trade_staff_number" name="inc_trade_staff_number">
+                      <option value="">--please select--</option>
+                			<option value="1" >0 People</option>
+                			<option value="2" >1-2 People</option>
+                			<option value="3" >3-5 People</option>
+                			<option value="4" >6-10 People</option>
+                			<option value="5" >11-20 People</option>
+                			<option value="6" >21-50 People</option>
+                			<option value="7" >Above 50 People</option>
+
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="" class="col-sm-3">@DbRes.T("Are you able to source across multiple industries?","계정.회사정보.필드")?</label>
+                  <div class="col-sm-9">
+                    <label for="inc_across_multiple_industries_yes" class="radio-inline"><input type="radio" id="inc_across_multiple_industries_yes" name="inc_across_multiple_industries" value="yes">Yes</label>
+                    <label for="inc_across_multiple_industries_no" class="radio-inline"><input type="radio" id="inc_across_multiple_industries_no" name="inc_across_multiple_industries" value="no">No</label>
+
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inc_rnd_staff_number" class="col-sm-3">@DbRes.T("No. of R & D Staff","계정.회사정보.필드")</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" id="inc_rnd_staff_number" name="inc_rnd_staff_number">
+                      <option value="">--- Please select ---</option>
+											<option value="1" >Less than 5 People</option>
+											<option value="2" >5 - 10 People</option>
+											<option value="3" >11 - 20 People</option>
+											<option value="4" >21 - 30 People</option>
+											<option value="5" >31 - 40 People</option>
+											<option value="6" >41 - 50 People</option>
+											<option value="31" >Above 50 People</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inc_qc_staff_number" class="col-sm-3">@DbRes.T("No. of QC Staff","계정.회사정보.필드")</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" id="inc_qc_staff_number" name="inc_qc_staff_number">
+                      <option value="">--- Please select ---</option>
+											<option value="1" >Less than 5 People</option>
+											<option value="2" >5 - 10 People</option>
+											<option value="3" >11 - 20 People</option>
+											<option value="4" >21 - 30 People</option>
+											<option value="5" >31 - 40 People</option>
+											<option value="6" >41 - 50 People</option>
+											<option value="31" >Above 50 People</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3">@DbRes.T("Nearest Port","계정.회사정보.필드")</label>
+                  <div class="col-sm-9">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <input type="text" class="form-control" name="inc_nearest_port1">
+                      </div>
+                      <div class="col-sm-3">
+                        <input type="text" class="form-control" name="inc_nearest_port2">
+                      </div>
+                      <div class="col-sm-3">
+                        <input type="text" class="form-control" name="inc_nearest_port3">
+                      </div>
+                    </div>
+                    <div class="help-block">
+                      <span>One port name per box.</span>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3">@DbRes.T("Average Lead Time","계정.회사정보.필드")</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" name="inc_avearage_lead_time">
+                    <div class="help-block"><span>Please enter the average production time. Numbers only.</span></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3">@DbRes.T("Does your company have an overseas office","계정.회사정보.필드")?</label>
+                  <div class="col-sm-9">
+                    <div class="radio">
+                      <label for="inc_have_overseas_office_yes"><input type="radio" id="inc_have_overseas_office_yes" name="inc_have_overseas_office" value="yes">Yes</label>
+                    </div>
+                    <div class="radio">
+                      <label for="inc_have_overseas_office_no"><input type="radio" id="inc_have_overseas_office_no" name="inc_have_overseas_office" value="no">No</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3">@DbRes.T("Accepted Delivery Terms","계정.회사정보.필드")</label>
+                  <div class="col-sm-9">
+                    <ul class="control-items" style="padding-left:20px;">
+                      <li><label class="checkbox"><input type="checkbox" 	value="1"  class="input-checkbox" name="inc_delivery_terms"> FOB</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="2"  class="input-checkbox" name="inc_delivery_terms"> CFR</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="3"  class="input-checkbox" name="inc_delivery_terms"> CIF</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="4"  class="input-checkbox" name="inc_delivery_terms"> EXW</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="5"  class="input-checkbox" name="inc_delivery_terms"> FAS</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="6"  class="input-checkbox" name="inc_delivery_terms"> CIP</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="7"  class="input-checkbox" name="inc_delivery_terms"> FCA</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="8"  class="input-checkbox" name="inc_delivery_terms"> CPT</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="9"  class="input-checkbox" name="inc_delivery_terms"> DEQ</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="10"  class="input-checkbox" name="inc_delivery_terms"> DDP</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="11"  class="input-checkbox" name="inc_delivery_terms"> DDU</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="12"  class="input-checkbox" name="inc_delivery_terms"> Express Delivery</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="13"  class="input-checkbox" name="inc_delivery_terms"> DAF</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="14"  class="input-checkbox" name="inc_delivery_terms"> DES</label></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3">@DbRes.T("Accepted Payment Type","계정.회사정보.필드")</label>
+                  <div class="col-sm-9">
+                    <ul class="controls-items" style="padding-left:20px;">
+                      <li><label class="checkbox"><input type="checkbox" 	value="1"  class="input-checkbox" name="inc_payment_type"> T/T</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="2"  class="input-checkbox" name="inc_payment_type"> L/C</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="3"  class="input-checkbox" name="inc_payment_type"> D/P D/A</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="4"  class="input-checkbox" name="inc_payment_type"> MoneyGram</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="5"  class="input-checkbox" name="inc_payment_type"> Credit Card</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="6"  class="input-checkbox" name="inc_payment_type"> PayPal</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="7"  class="input-checkbox" name="inc_payment_type"> Western Union</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="8"  class="input-checkbox" name="inc_payment_type"> Cash</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="9"  class="input-checkbox" name="inc_payment_type"> Escrow</label></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3">@DbRes.T("Language Spoken","계정.회사정보.필드")</label>
+                  <div class="col-sm-9">
+                    <ul class="controls-items" style="padding-left:20px;">
+                      <li><label class="checkbox"><input type="checkbox" 	value="1"  class="input-checkbox" name="inc_language_spoken"> English</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="2"  class="input-checkbox" name="inc_language_spoken"> Chinese</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="3"  class="input-checkbox" name="inc_language_spoken"> Spanish</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="4"  class="input-checkbox" name="inc_language_spoken"> Japanese</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="5"  class="input-checkbox" name="inc_language_spoken"> Portuguese</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="6"  class="input-checkbox" name="inc_language_spoken"> German</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="7"  class="input-checkbox" name="inc_language_spoken"> Arabic</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="8"  class="input-checkbox" name="inc_language_spoken"> French</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="9"  class="input-checkbox" name="inc_language_spoken"> Russian</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="10"  class="input-checkbox" name="inc_language_spoken"> Korean</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="11"  class="input-checkbox" name="inc_language_spoken"> Hindi</label></li>
+                      <li><label class="checkbox"><input type="checkbox" 	value="12"  class="input-checkbox" name="inc_language_spoken"> Italian</label></li>
+                    </ul>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- panel-footer 시작 -->
+            <div class="panel-footer">
+              <div class="btn-group">
+                <div class="col-sm-3">
+                  <button type="button" class="btn btn-save" name="button">Save</button>
+                  <button type="button" class="btn btn-submit" name="button">Submit</button>
+                </div>
+                <div class="col-sm-9">
+                  <div class="text-info">
+                    By clicking 'Submit', all the information in the Manage Company Information section will be submitted. Once submitted, no further editing is allowed within one working day.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--
+  [Name]
+  inc_total_annual_revenue
+  inc_export_percentage
+  iinc_market_northamerica
+  inc_market_southamerica
+  inc_market_easterneurope
+  inc_market_southeastasia
+  inc_market_africa
+  inc_market_oceania
+  inc_market_mideast
+  inc_market_easternasia
+  inc_market_westerneurope
+  inc_market_northamerica
+  inc_market_centralamerica
+  inc_market_northerneurope
+  inc_market_southerneurope
+  inc_market_southasia
+  inc_market_domesticmarket
+  inc_exporting_year
+  inc_add_customer_datails
+  inc_trade_staff_number
+  inc_across_multiple_industries
+  inc_rnd_staff_number
+  inc_qc_staff_number
+  inc_nearest_port1
+  inc_nearest_port2
+  inc_nearest_port3
+  inc_avearage_lead_time
+  inc_have_overseas_office
+  inc_delivery_terms
+  inc_payment_type
+  inc_language_spoken -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script type="text/javascript" src="js/script.js">
+  </script>
+</body>
+
+</html>

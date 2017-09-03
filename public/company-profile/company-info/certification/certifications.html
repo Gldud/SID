@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>Certifications</title>
+</head>
+
+<body>
+  <div class="">
+    <div class="container">
+      <!-- 전체 패널 시작 -->
+      <div class="panel">
+        <div class="panel-heading">
+          <h1>Manage Company Information</h1>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <!-- 첫번째 패널 시작 -->
+              <div class="panel">
+                <!-- panel-heading 시작-->
+                <div class="panel-heading">
+                  <h2>Add a certification</h2>
+                </div>
+                <!-- panel-body 시작-->
+                <div class="panel-body">
+                  <form class="form-horizontal">
+                    <div class="form-group">
+                      <label for="inc_type_of_certification" class="col-sm-3">@DbRes.T("Type of Certification","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <select class="form-control" id="inc_type_of_certification" name="inc_type_of_certification">
+                          <option value>Please Select...</option>
+                          <option value="management_cert">Management System Certifications</option>
+                          <option value="product_cert">Product Certifications/Testing Reports</option>
+                          <option value="industry_standard_auth">Industry Standard Authorizations</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_reference_code" class="col-sm-3">@DbRes.T("Reference no.","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inc_reference_code" name="inc_reference_code">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_certification_name" class="col-sm-3">@DbRes.T("Certification Name","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <select class="form-control" id="inc_certification_name" name="inc_certification_name">
+                          <!-- [추가] -->
+                          <option value>Please Select...</option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_certification_issued_by" class="col-sm-3">@DbRes.T("Certification Issued By","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <select class="form-control" id="inc_certification_issued_by" name="inc_certification_issued_by">
+                          <option value="" selected="selected" >Please Select...</option>
+													<option value="ABS" title="American Bureau of Shipping " >ABS</option>
+													<option value="BSI" title="BSI" >BSI</option>
+													<option value="BV" title="Bureau Veritas" >BV</option>
+													<option value="China Great Wall Quality" title="China Great Wall Quality" >China Great Wall Quality</option>
+													<option value="CQC" title="China Quality Certification Centre" >CQC</option>
+													<option value="CQM" title="China Quality Mark Certification Group" >CQM</option>
+													<option value="Dekra" title="Dekra" >Dekra</option>
+													<option value="DNV" title="DNV" >DNV</option>
+													<option value="DQS" title="DQS Holding GmbH" >DQS</option>
+													<option value="Intertek" title="Intertek" >Intertek</option>
+													<option value="LR" title="Lloyd&iexcl;&macr;s Register of Shipping" >LR</option>
+													<option value="MOODY" title="MOODY" >MOODY</option>
+													<option value="SGS" title="Societe Generale de Surveillance S.A." >SGS</option>
+													<option value="TUV NORD" title="TUV NORD" >TUV NORD</option>
+													<option value="TUV Rheinland" title="TUV Rheinland" >TUV Rheinland</option>
+													<option value="TUV SUD" title="TUV SUD" >TUV SUD</option>
+													<option value="UL" title="Underwriter Laboratories Inc." >UL</option>
+													<option value="WIT" title="WIT" >WIT</option>
+													<option value="Other" title="Other" >Other</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_certification_start_date" class="col-sm-3">@DbRes.T("Start Date (validity period)","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="date" class="form-control" id="inc_certification_start_date" name="inc_certification_start_date">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_certification_end_date" class="col-sm-3">@DbRes.T("End Date (validity period)","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="date" class="form-control" id="inc_certification_end_date" name="inc_certification_end_date">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_add_cerification_image" class="col-sm-3">@DbRes.T("Image","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="file" id="inc_add_cerification_image" name="inc_add_cerification_image" value="Browse">
+                        <span class="remove-all"><a href="#">Remove All</a></span>
+                        <div class="remark">
+                          <span>200KB Max. JPEG or PNG format only.</span>
+                        </div>
+                        <div class="image-upload">
+                          <!-- [추가]이미지 업로드 -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_certification_scope" class="col-sm-3">@DbRes.T("Scope","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <textarea class="form-control" id="inc_certification_scope" name="inc_certification_scope" rows="8" cols="80"></textarea>
+                        <div class="remark textarea-remark">
+                          Remaining:
+                          <span class="remark-count"></span>
+                        </div>
+                        <div class="remark">
+                          Please enter the products and relevant audit information the certificate covers, e.g. the certificate verifies the production of paper packaging products (excluding the printing capabilities if there are printed graphics on the paper packaging).
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-3 col-sm-offset-3">
+                        <!-- [추가]폼 업로드 -->
+                        <input type="button" class="btn" name="" value="Upload">
+                      </div>
+                      <div class="col-sm-6">
+                        <span>Click "Upload" to submit information</span>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="table-list">
+                    <h2>Submitted Certifications List</h2>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Reference...</th>
+                          <th>Name</th>
+                          <th>Issued By</th>
+                          <th>Type of Certification</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- panel-footer 시작 -->
+                <div class="panel-footer">
+                  <div class="btn-group">
+                    <div class="col-sm-3">
+                      <button type="button" class="btn btn-save" name="button">Save</button>
+                      <button type="button" class="btn btn-submit" name="button">Submit</button>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="text-info">
+                        By clicking 'Submit', all the information in the Manage Company Information section will be submitted. Once submitted, no further editing is allowed within one working day.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <!-- 두번째 패널 시작 -->
+              <div class="panel">
+                <!-- panel-heading 시작-->
+                <div class="panel-heading">
+                  <h2>Add an Award or Certification</h2>
+                </div>
+                <!-- panel-body 시작-->
+                <div class="panel-body">
+                  <form class="form-horizontal">
+                    <div class="form-group">
+                      <label for="inc_award_name" class="col-sm-3">@DbRes.T("Award Name","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inc_award_name" name="inc_award_name">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_award_issued_by" class="col-sm-3">@DbRes.T("Award Issued By","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inc_award_issued_by" name="inc_award_issued_by">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_award_start_date" class="col-sm-3">@DbRes.T("Start Date","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="date" class="form-control" id="inc_award_start_date" name="inc_award_start_date">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_add_award_image" class="col-sm-3">@DbRes.T("Image","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="file" id="inc_add_award_image" name="inc_add_award_image" value="Browse">
+                        <span class="remove-all"><a href="#">Remove All</a></span>
+                        <div class="remark">
+                          <span>200KB Max. JPEG or PNG format only.</span>
+                        </div>
+                        <div class="image-upload">
+                          <!-- [추가]이미지 업로드 -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_award_certification_description" class="col-sm-3">@DbRes.T("Certification Description","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <textarea class="form-control" id="inc_award_certification_description" name="inc_award_certification_description" rows="8" cols="80"></textarea>
+                        <div class="remark textarea-remark">
+                          Remaining:
+                          <span class="remark-count"></span>
+                        </div>
+                        <div class="remark">
+                          Please enter the products and relevant audit information the certificate covers, e.g. the certificate verifies the production of paper packaging products (excluding the printing capabilities if there are printed graphics on the paper packaging).
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-3 col-sm-offset-3">
+                        <!-- [추가]폼 업로드 -->
+                        <input type="button" class="btn" name="" value="Upload">
+                      </div>
+                      <div class="col-sm-6">
+                        <span>Click "Upload" to submit information</span>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="table-list">
+                    <h2>Submitted Certifications List</h2>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Reference...</th>
+                          <th>Name</th>
+                          <th>Issued By</th>
+                          <th>Type of Certification</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- panel-footer 시작 -->
+                <div class="panel-footer">
+                  <div class="btn-group">
+                    <div class="col-sm-3">
+                      <button type="button" class="btn btn-save" name="button">Save</button>
+                      <button type="button" class="btn btn-submit" name="button">Submit</button>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="text-info">
+                        By clicking 'Submit', all the information in the Manage Company Information section will be submitted. Once submitted, no further editing is allowed within one working day.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <!-- 세번째 패널 시작 -->
+              <div class="panel">
+                <!-- panel-heading 시작-->
+                <div class="panel-heading">
+                  <h2>Add a Patent</h2>
+                </div>
+                <!-- panel-body 시작-->
+                <div class="panel-body">
+                  <form class="form-horizontal">
+                    <div class="form-group">
+                      <label for="inc_patent_code" class="col-sm-3">@DbRes.T("No. of Patent","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inc_patent_code" name="inc_patent_code">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_patent_name" class="col-sm-3">@DbRes.T("Patent Name","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inc_patent_name" name="inc_patent_name">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_type_of_patent" class="col-sm-3">@DbRes.T("Type of Patent","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <select class="form-control" id="inc_type_of_patent" name="inc_type_of_patent">
+                          <option value>Please Select...</option>
+                          <option value="management_cert">Management System Certifications</option>
+                          <option value="product_cert">Product Certifications/Testing Reports</option>
+                          <option value="">Industry Standard Authorizations</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_patent_start_date" class="col-sm-3">@DbRes.T("Start Date","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="date" class="form-control" id="inc_patent_start_date" name="inc_patent_start_date">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_add_patent_image" class="col-sm-3">@DbRes.T("Image","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="file" id="inc_add_patent_image" name="inc_add_patent_image" value="Browse">
+                        <span class="remove-all"><a href="#">Remove All</a></span>
+                        <div class="remark">
+                          <span>200KB Max. JPEG or PNG format only.</span>
+                        </div>
+                        <div class="image-upload">
+                          <!-- [추가]이미지 업로드 -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-3 col-sm-offset-3">
+                        <!-- [추가]폼 업로드 -->
+                        <input type="button" class="btn" name="" value="Upload">
+                      </div>
+                      <div class="col-sm-6">
+                        <span>Click "Upload" to submit information</span>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="table-list">
+                    <h2>Submitted Patent List</h2>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>No. of Patent</th>
+                          <th>Patent Name</th>
+                          <th>Type of Patent</th>
+                          <th>Start Date</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- panel-footer 시작 -->
+                <div class="panel-footer">
+                  <div class="btn-group">
+                    <div class="col-sm-3">
+                      <button type="button" class="btn btn-save" name="button">Save</button>
+                      <button type="button" class="btn btn-submit" name="button">Submit</button>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="text-info">
+                        By clicking 'Submit', all the information in the Manage Company Information section will be submitted. Once submitted, no further editing is allowed within one working day.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <!-- 네번째 패널 시작 -->
+              <div class="panel">
+                <!-- panel-heading 시작-->
+                <div class="panel-heading">
+                  <h2>Add a trademark</h2>
+                </div>
+                <!-- panel-body 시작-->
+                <div class="panel-body">
+                  <form class="form-horizontal">
+                    <div class="form-group">
+                      <label for="inc_trademark_registration_code" class="col-sm-3">@DbRes.T("Registration/Filing No.","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inc_trademark_registration_code" name="inc_trademark_registration_code">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_trademark_name" class="col-sm-3">@DbRes.T("Trademark Name","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inc_trademark_name" name="inc_trademark_name">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_trademark_start_date" class="col-sm-3">@DbRes.T("Start Date","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="date" class="form-control" id="inc_trademark_start_date" name="inc_trademark_start_date">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_trademark_end_date" class="col-sm-3">@DbRes.T("End Date(validity period)","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="date" class="form-control" id="inc_trademark_end_date" name="inc_trademark_end_date">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_add_trademark_image" class="col-sm-3">@DbRes.T("Image","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <input type="file" id="inc_add_trademark_image" name="inc_add_trademark_image" value="Browse">
+                        <span class="remove-all"><a href="#">Remove All</a></span>
+                        <div class="remark">
+                          <span>200KB Max. JPEG or PNG format only.</span>
+                        </div>
+                        <div class="image-upload">
+                          <!-- [추가]이미지 업로드 -->
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inc_trademark_approved_goods" class="col-sm-3">@DbRes.T("Approved Goods","계정.회사정보.필드")</label>
+                      <div class="col-sm-9">
+                        <textarea class="form-control" id="inc_trademark_approved_goods" name="inc_trademark_approved_goods" rows="8" cols="80"></textarea>
+                        <div class="remark textarea-remark">
+                          Remaining:
+                          <span class="remark-count"></span>
+                        </div>
+                        <div class="remark">
+                          Please enter the products and relevant audit information the certificate covers, e.g. the certificate verifies the production of paper packaging products (excluding the printing capabilities if there are printed graphics on the paper packaging).
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-3 col-sm-offset-3">
+                        <!-- [추가]폼 업로드 -->
+                        <input type="button" class="btn" name="" value="Upload">
+                      </div>
+                      <div class="col-sm-6">
+                        <span>Click "Upload" to submit information</span>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="table-list">
+                    <h2>Submitted Trademarks List</h2>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Registration/Filing No.</th>
+                          <th>Trademark Name</th>
+                          <th>Start Date</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- panel-footer 시작 -->
+                <div class="panel-footer">
+                  <div class="btn-group">
+                    <div class="col-sm-3">
+                      <button type="button" class="btn btn-save" name="button">Save</button>
+                      <button type="button" class="btn btn-submit" name="button">Submit</button>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="text-info">
+                        By clicking 'Submit', all the information in the Manage Company Information section will be submitted. Once submitted, no further editing is allowed within one working day.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <div class="btn-group">
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-save" name="button">Save</button>
+              <button type="button" class="btn btn-submit" name="button">Submit</button>
+            </div>
+            <div class="col-sm-9">
+              <div class="text-info">
+                By clicking 'Submit', all the information in the Manage Company Information section will be submitted. Once submitted, no further editing is allowed within one working day.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <!--
+  [Name]
+  inc_type_of_certification
+  inc_reference_code
+  inc_certification_name
+  inc_certification_issued_by
+  inc_certification_start_date
+  inc_certification_end_date
+  inc_add_cerification_image
+  inc_certification_scope
+  inc_award_name
+  inc_award_issued_by
+  inc_award_start_date
+  inc_add_award_image
+  inc_award_certification_description
+  inc_patent_code
+  inc_patent_name
+  inc_type_of_patent
+  inc_patent_start_date
+  inc_add_patent_image
+  inc_trademark_registration_code
+  inc_trademark_name
+  inc_trademark_start_date
+  inc_trademark_end_date
+  inc_add_trademark_image
+  inc_trademark_approved_goods -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script type="text/javascript" src="js/script.js">
+  </script>
+</body>
+
+</html>

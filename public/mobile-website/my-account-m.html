@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <nav id="main-nav">
+      <a href="#" class="mobile-nav-icon"><i class="fa fa-bars" aria-hidden="true"></i></a>
+    </nav>
+    <h1>Main Logo</h1>
+  </header>
+  <main>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- Key Information 시작 -->
+          <div class="key-info">
+            <h1>Key Information</h1>
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label class="col-sm-3">Business Pattern</label>
+                <div class="col-sm-9">
+                  <div class="radio">
+                    <label for="inc_represent_company_yes"><input type="radio" id="inc_represent_company_yes" name="inc_business_pattern" value="yes">I represent a company</label>
+                  </div>
+                  <div class="radio">
+                    <label for="inc_represent_company_no"><input type="radio" id="inc_represent_company_no" name="inc_business_pattern" value="no">I do not represent a company</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">Name</label>
+                <div class="col-sm-9">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" name="inc_first_name">
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" name="inc_last_name">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">Gender</label>
+                <div class="col-sm-9">
+                  <label for="inc_gender_male" class="radio-inline"><input type="radio" id="inc_gender_male" name="inc_gender" value="male">Male</label>
+                  <label for="inc_gender_female" class="radio-inline"><input type="radio" id="inc_gender_female" name="inc_gender" value="female">Female</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_job_title" class="col-sm-3">Job Title</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="inc_job_title" name="inc_job_title">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_email" class="col-sm-3">Email</label>
+                <div class="col-sm-9">
+                  <input type="email" class="form-control" id="inc_email" name="inc_email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">Contact Address</label>
+                <div class="col-sm-9">
+                  <div class="form-group">
+                    <label for="inc_street" class="col-sm-3">Street</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_street" name="inc_street">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_city" class="col-sm-3">City</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_city" name="inc_city">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_province" class="col-sm-3">Province/State/Country</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_province" name="inc_province">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_country" class="col-sm-3">Country/Region:</label>
+                    <div class="col-sm-6">
+                      <select class="form-control" id="inc_country" name="inc_country">
+                            <!-- [추가작업]나라 옵션  -->
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                          </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_zipcode" class="col-sm-3">Zip Code</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_zipcode" name="inc_zipcode">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">Tel</label>
+                <div class="col-sm-9">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <label for="inc_tel_contrycode">Contry Code</label>
+                      <input type="text" class="form-control" id="inc_tel_contrycode" name="inc_tel_contrycode">
+                    </div>
+                    <div class="col-sm-3">
+                      <label for="inc_tel_areacode">Area Code</label>
+                      <input type="text" class="form-control" id="inc_tel_areacode" name="inc_tel_areacode">
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="inc_tel_number">Number</label>
+                      <input type="text" class="form-control" id="inc_tel_number" name="inc_tel_number">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">fax</label>
+                <div class="col-sm-9">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <label for="inc_fax_contrycode">Contry Code</label>
+                      <input type="text" class="form-control" id="inc_fax_contrycode" name="inc_fax_contrycode">
+                    </div>
+                    <div class="col-sm-3">
+                      <label for="inc_fax_areacode">Area Code</label>
+                      <input type="text" class="form-control" id="inc_fax_areacode" name="inc_fax_areacode">
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="inc_fax_number">Number</label>
+                      <input type="text" class="form-control" id="inc_fax_number" name="inc_fax_number">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_company_name" class="col-sm-3">Company Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="inc_company_name" name="inc_company_name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_business_type" class="col-sm-3">Business Type</label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="inc_business_type" name="inc_business_type">
+                      <option value="">- Please select one -</option>
+                      <option value="Buying Office">Buying Office</option>
+                      <option value="Manufacturer">Manufacturer</option>
+                      <option value="Trading Company">Trading Company</option>
+                      <option value="Distributor/Wholesaler">Distributor/Wholesaler</option>
+                      <option value="Retailer">Retailer</option>
+                      <option value="Broker, Consultant commission-based">Broker, Consultant commission-based</option>
+                      <option value="Government Agency / Organization">Government Agency / Organization</option>
+                      <option value="Other">Other</option>
+
+                    </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">Website</label>
+                <div class="col-sm-9">
+                  <label for="inc_have_website_yes" class="radio-inline"><input type="radio" id="inc_have_website_yes" name="inc_have_website" value="yes">I have one</label>
+                  <label for="inc_have_website_no" class="radio-inline"><input type="radio" id="inc_have_website_no" name="inc_have_website" value="no">I don't have one</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- More Information 시작 -->
+          <div class="more-info">
+            <h1>More Information</h1>
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="inc_our_industry" class="col-sm-3">Industry we are in</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="inc_our_industry" name="inc_our_industry">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">Product we source</label>
+                <div class="col-sm-9">
+                  <div class="form-group">
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" name="inc_product_name1" placeholder="product name">
+                    </div>
+                    <div class="col-sm-6">
+                      <select class="form-control">
+                          <option value="">-select corrensponding category-</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" name="inc_product_name2" placeholder="product name">
+                    </div>
+                    <div class="col-sm-6">
+                      <select class="form-control">
+                          <option value="">-select corrensponding category-</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" name="inc_product_name3" placeholder="product name">
+                    </div>
+                    <div class="col-sm-6">
+                      <select class="form-control">
+                          <option value="">-select corrensponding category-</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_purchasing_Frequency" class="col-sm-3">Purchasing Frequency</label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="inc_purchasing_Frequency" name="inc_purchasing_Frequency">
+                      <option value="">- Please select one -</option>
+                      <option value="Less than one month">Less than one month</option>
+                      <option value="One month">One month</option>
+                      <option value="One quarter">One quarter</option>
+                      <option value="Half a year">Half a year</option>
+                      <option value="One year">One year</option>
+                      <option value="Long than one year">Long than one year</option>
+                    </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_annual_purchase_volume" class="col-sm-3">Annual Purchase Volume	</label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="inc_annual_purchase_volume" name="inc_annual_purchase_volume">
+                      <option value="">- Please select one -</option>
+                      <option value="Below US$10,000">Below US$10,000</option>
+                      <option value="US$10,000 - US$100,000">US$10,000 - US$100,000</option>
+                      <option value="US$100,000 - US$300,000">US$100,000 - US$300,000</option>
+                      <option value="US$300,000 - US$500,000">US$300,000 - US$500,000</option>
+                      <option value="US$500,000 - US$1 Million">US$500,000 - US$1 Million</option>
+                      <option value="US$1 Million - US$5 Million">US$1 Million - US$5 Million</option>
+                      <option value="Above US$5 Million">Above US$5 Million</option>
+
+                    </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">Preferred Supplier Location</label>
+                <div class="col-sm-9">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <select class="form-control" id="inc_preferred_supplier_location1" name="inc_preferred_supplier_location1">
+                          <option value="">--please select--</option>
+                          <option value="1" >Below US$1 Million</option>
+                          <option value="2" >US$1 Million - US$2.5 Million</option>
+                          <option value="3" >US$2.5 Million - US$5 Million</option>
+                          <option value="4" >US$5 Million - US$10 Million</option>
+                          <option value="5" >US$10 Million - US$50 Million</option>
+                          <option value="6" >US$50 Million - US$100 Million</option>
+                          <option value="7" >Above US$100 Million</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <select class="form-control" id="inc_preferred_supplier_location2" name="inc_preferred_supplier_location2">
+                          <option value="">--please select--</option>
+                          <option value="1" >Below US$1 Million</option>
+                          <option value="2" >US$1 Million - US$2.5 Million</option>
+                          <option value="3" >US$2.5 Million - US$5 Million</option>
+                          <option value="4" >US$5 Million - US$10 Million</option>
+                          <option value="5" >US$10 Million - US$50 Million</option>
+                          <option value="6" >US$50 Million - US$100 Million</option>
+                          <option value="7" >Above US$100 Million</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <select class="form-control" id="inc_preferred_supplier_location3" name="inc_preferred_supplier_location3">
+                          <option value="">--please select--</option>
+                          <option value="1" >Below US$1 Million</option>
+                          <option value="2" >US$1 Million - US$2.5 Million</option>
+                          <option value="3" >US$2.5 Million - US$5 Million</option>
+                          <option value="4" >US$5 Million - US$10 Million</option>
+                          <option value="5" >US$10 Million - US$50 Million</option>
+                          <option value="6" >US$50 Million - US$100 Million</option>
+                          <option value="7" >Above US$100 Million</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">Preferred Supplier Type</label>
+                <div class="col-sm-9">
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="manufacturer">Manufacturer</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="trading_Company">Trading Company</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="buying_office">Buying Office</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="agent">Agent</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="distributor">Distributor/Wholesaler</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="government">Government ministry/Bureau/Commission</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="association">Association</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="business_service">Business Service (Transportation, finance, travel, Ads, etc)</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="other">Other</label>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">Company Address</label>
+                <div class="col-sm-9">
+                  <div class="form-group">
+                    <label for="inc_company_street" class="col-sm-3">Street</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_company_street" name="inc_company_street">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_company_city" class="col-sm-3">City</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_company_city" name="inc_company_city">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_company_province" class="col-sm-3">Province/State/Country</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_company_province" name="inc_company_province">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_company_country" class="col-sm-3">Country/Region:</label>
+                    <div class="col-sm-6">
+                      <select class="form-control" id="inc_company_country" name="inc_company_country">
+                            <!-- [추가]나라 옵션  -->
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                          </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_company_zipcode" class="col-sm-3">Zip Code</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_company_zipcode" name="inc_company_zipcode">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_company_introduction" class="col-sm-3">Company Introduction</label>
+                <div class="col-sm-9">
+                  <textarea class="form-control" id="inc_company_introduction" name="inc_company_introduction" rows="8" cols="80"></textarea>
+                  <div class="remark textarea-remark">
+                    Remaining:
+                    <span class="remark-count"></span>
+                  </div>
+
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">Company Logo</label>
+                <div class="col-sm-9">
+                  <img src="" alt="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_company_introduction" class="col-sm-3">Company License</label>
+                <div class="col-sm-9">
+                  <!-- [추가작업]이미지 업로드 -->
+                  <div class="">
+                    <input type="file" name="" value="">
+                    <span><a href="#">Remove All</a></span>
+                  </div>
+                  <div class="">
+
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <button type="button" class="btn btn-submit" name="button">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <aside id="mobile-sidebar">
+    <div class="wrapper">
+      <h2 class="screen-reader-text">Mobile Sidebar</h2>
+      <div class="system-bar">
+        <a href="my-account-m.html"></a>
+      </div>
+      <div class="nav-wrap">
+        <div class="side-menu-container" id="menu-container">
+          <ul class="menu-list accordion">
+            <li class="toggle accordion-toggle">
+              <a>
+                <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                <span>Products</span>
+              </a>
+              <ul class="menu-submenu accordion-content">
+                <li>
+                  <a href="">Products</a>
+                  <ul>
+                    <li><a href="">Product management</a></li>
+                    <li><a href="">Application for Registration</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li class="toggle accordion-toggle">
+              <a href=""><i class="fa fa-address-book-o" aria-hidden="true"></i>
+                 <span>Sales</span></a>
+              <ul class="menu-submenu accordion-content">
+                <li>
+                  <a href="">Sales</a>
+                  <ul>
+                    <li><a href="">Order</a></li>
+
+                  </ul>
+                </li>
+                <li>
+                  <a href="">Document</a>
+                  <ul>
+                    <li><a href="">Related documents</a></li>
+
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="toggle accordion-toggle">
+              <a href=""><i class="fa fa-address-book-o" aria-hidden="true"></i>
+                <span>Inventory</span>
+                </a>
+              <ul class="menu-submenu accordion-content">
+                <li>
+                  <a href="">Warehouse</a>
+                  <ul>
+                    <li><a href="">Registration for Warehouse</a></li>
+                    <li><a href="">Stock in</a></li>
+                    <li><a href="">Searching for OUT</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">Stock</a>
+                  <ul>
+                    <li><a href="">Searching</a></li>
+                    <li><a href="">Stock Shortage</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </li>
+            <li class="toggle accordion-toggle">
+              <a href=""><i class="fa fa-address-book-o" aria-hidden="true"></i>
+              <span>Customer Support</span></a>
+              <ul class="menu-submenu accordion-content">
+                <li>
+                  <a href="">General Q&A</a>
+
+                </li>
+                <li>
+                  <a href="">Product Q&A</a>
+
+                </li>
+              </ul>
+            </li>
+            <li class="toggle accordion-toggle">
+              <a href=""><i class="fa fa-address-book-o" aria-hidden="true"></i>
+                <span>Account</span></a>
+              <ul class="menu-submenu accordion-content">
+                <li>
+                  <a href="">Billing</a>
+                  <ul>
+                    <li><a href="">Sales Amount</a></li>
+
+                  </ul>
+                </li>
+                <li>
+                  <a href="">Payment</a>
+                  <ul>
+                    <li><a href="">Payment List</a></li>
+                    <li><a href="">Payment Setting</a></li>
+
+                  </ul>
+                </li>
+              </ul>
+
+            </li>
+            <li class="toggle accordion-toggle">
+              <a href=""><i class="fa fa-address-book-o" aria-hidden="true"></i><span>Info. & Certi.</span></a>
+              <ul class="menu-submenu accordion-content">
+                <li>
+                  <a href="">Company Info</a>
+                  <ul>
+                    <li><a href="">Company Profile</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">Certification</a>
+                  <ul>
+                    <li><a href="">Membership</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">Upload files</a>
+                  <ul>
+                    <li><a href="">Document & Certificate</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="toggle accordion-toggle">
+              <a href=""><i class="fa fa-address-book-o" aria-hidden="true"></i><span>Setting</span></a>
+              <ul class="menu-submenu accordion-content">
+                <li>
+                  <a href="">Personal Info</a>
+                  <ul>
+                    <li><a href="">General Info.</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">Security</a>
+                  <ul>
+                    <li><a href="">Password</a></li>
+                    <li><a href="">Email Address</a></li>
+                    <li><a href="">Secutity Question</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div id="nav-fade">
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script type="text/javascript" src="script.js">
+  </script>
+</body>
+
+</html>

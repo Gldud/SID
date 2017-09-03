@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <div id="wrapper">
+    <!-- <div class="topbar">
+      <div class="navbar navbar-default navbar-fixed-top">
+
+      </div>
+    </div> -->
+    <div class="side-menu" role="navigation">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <div class="sidebar-brand">
+            <a href="javascript:void(0)">Brand<i class="fa fa-bars" aria-hidden="true"></i></a>
+
+          </div>
+        </div>
+        <div class="side-menu-container" id="menu-container">
+          <ul class="menu-list accordion">
+            <li class="toggle accordion-toggle">
+              <a>
+                <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                <span>상품관리</span>
+              </a>
+              <ul class="menu-submenu accordion-content">
+                <li>
+                  <a href="">환경 설정</a>
+                  <ul>
+                    <li><a href="">판매수수료 설정</a></li>
+                    <li><a href="">이미지 설정</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">분류설정</a>
+                  <ul>
+                    <li><a href="">상품분류 관리</a></li>
+                    <li><a href="">브랜드 관리</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="toggle accordion-toggle">
+              <a href="">
+                <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                <span>B2B 거래관리</span>
+              </a>
+            </li>
+            <li class="toggle accordion-toggle">
+              <a href=""><i class="fa fa-address-book-o" aria-hidden="true"></i>
+                 <span>물류관리</span></a>
+              <ul class="menu-submenu accordion-content">
+                <li>
+                  <a href="">물류 관리</a>
+                  <ul>
+                    <li><a href="">물류지점관리</a></li>
+                    <li><a href="">입고내역조회</a></li>
+                    <li><a href="">출고내역조회</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">재고 관리</a>
+                  <ul>
+                    <li><a href="">재고 검색</a></li>
+                    <li><a href="">저재고분 조회</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="toggle accordion-toggle">
+              <a href=""><i class="fa fa-address-book-o" aria-hidden="true"></i>
+                <span>업체관리</span>
+                </a>
+              <ul class="menu-submenu accordion-content">
+                <li>
+                  <a href="">상품 관리</a>
+                  <ul>
+                    <li><a href="">판매상품 관리</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">업체 관리</a>
+                  <ul>
+                    <li><a href="">스토어 업체관리</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">승인 관리</a>
+                  <ul>
+                    <li><a href="">스토어 승인관리</a></li>
+                    <li><a href="">상품 승인관리</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="toggle accordion-toggle">
+              <a href=""><i class="fa fa-address-book-o" aria-hidden="true"></i>
+              <span>금융관리</span></a>
+              <ul class="menu-submenu accordion-content">
+                <li>
+                  <a href="">입금 관리</a>
+                  <ul>
+                    <li><a href="">임금 목록</a></li>
+                    <li><a href="">입금 등록</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">출금 관리</a>
+                  <ul>
+                    <li><a href="">출금 목록</a></li>
+                    <li><a href="">출금 등록</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="toggle accordion-toggle">
+              <a href=""><i class="fa fa-address-book-o" aria-hidden="true"></i>
+                <span>고객관리</span></a>
+              <ul class="menu-submenu accordion-content">
+                <li><a href="">회원관리</a></li>
+                <li><a href="">통합 회원관리</a></li>
+              </ul>
+            </li>
+            <li class="toggle accordion-toggle">
+              <a href=""><i class="fa fa-address-book-o" aria-hidden="true"></i><span>고객지원</span></a>
+              <ul class="menu-submenu accordion-content">
+                <li><a href="">고객문의</a></li>
+                <li><a href="">고객 문의관리</a></li>
+                <li><a href="">상품 문의관리</a></li>
+              </ul>
+            </li>
+            <li class="toggle accordion-toggle">
+              <a href=""><i class="fa fa-address-book-o" aria-hidden="true"></i>
+              </a>
+              <ul class="menu-submenu accordion-content">
+                <li>
+                  <a href="">배송관리 설정</a>
+                  <ul>
+                    <li><a href="">배송사 관리</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">메일관리 설정</a>
+                  <ul>
+                    <li><a href="">자동발송 메일관리</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content-page"></div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script type="text/javascript" src="js/script.js">
+
+  </script>
+</body>
+</html>

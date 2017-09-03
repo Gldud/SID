@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>My Account</title>
+</head>
+
+<body>
+  <div class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- Key Information 시작 -->
+          <div class="key-info">
+            <h1>Key Information</h1>
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label class="col-sm-3">@DbRes.T("Business Pattern","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <div class="radio">
+                    <label for="inc_represent_company_yes"><input type="radio" id="inc_represent_company_yes" name="inc_business_pattern" value="yes">I represent a company</label>
+                  </div>
+                  <div class="radio">
+                    <label for="inc_represent_company_no"><input type="radio" id="inc_represent_company_no" name="inc_business_pattern" value="no">I do not represent a company</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">@DbRes.T("Name","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" name="inc_first_name">
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" name="inc_last_name">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">@DbRes.T("Gender","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <label for="inc_gender_male" class="radio-inline"><input type="radio" id="inc_gender_male" name="inc_gender" value="male">Male</label>
+                  <label for="inc_gender_female" class="radio-inline"><input type="radio" id="inc_gender_female" name="inc_gender" value="female">Female</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_job_title" class="col-sm-3">@DbRes.T("Job Title","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="inc_job_title" name="inc_job_title">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_email" class="col-sm-3">@DbRes.T("Email","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <input type="email" class="form-control" id="inc_email" name="inc_email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">@DbRes.T("Contact Address","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <div class="form-group">
+                    <label for="inc_address_street" class="col-sm-3">@DbRes.T("Contact Address > Street","계정.개인정보.필드")</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_address_street" name="inc_address_street">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_address_city" class="col-sm-3">@DbRes.T("Contact Address > City","계정.개인정보.필드")</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_address_city" name="inc_address_city">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_address_province" class="col-sm-3">@DbRes.T("Contact Address > Province/State/Country","계정.개인정보.필드")</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_address_province" name="inc_address_province">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_address_country" class="col-sm-3">@DbRes.T("Contact Address > Country/Region","계정.개인정보.필드")</label>
+                    <div class="col-sm-6">
+                      <select class="form-control" id="inc_address_country" name="inc_address_country">
+                          <!-- [추가작업]나라 옵션  -->
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_address_zipcode" class="col-sm-3">@DbRes.T("Contact Address > Zip Code","계정.개인정보.필드")</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_address_zipcode" name="inc_address_zipcode">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">@DbRes.T("Tel","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <label for="inc_tel_contrycode">@DbRes.T("Tel > Country Code","계정.개인정보.필드")</label>
+                      <input type="text" class="form-control" id="inc_tel_contrycode" name="inc_tel_contrycode">
+                    </div>
+                    <div class="col-sm-3">
+                      <label for="inc_tel_areacode">@DbRes.T("Tel > Area Code","계정.개인정보.필드")</label>
+                      <input type="text" class="form-control" id="inc_tel_areacode" name="inc_tel_areacode">
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="inc_tel_number">@DbRes.T("Tel > Number","계정.개인정보.필드")</label>
+                      <input type="text" class="form-control" id="inc_tel_number" name="inc_tel_number">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">@DbRes.T("fax","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <label for="inc_fax_contrycode">@DbRes.T("fax > Contry Code ","계정.개인정보.필드")</label>
+                      <input type="text" class="form-control" id="inc_fax_contrycode" name="inc_fax_contrycode">
+                    </div>
+                    <div class="col-sm-3">
+                      <label for="inc_fax_areacode">@DbRes.T("fax > North Americ","계정.개인정보.필드")</label>
+                      <input type="text" class="form-control" id="inc_fax_areacode" name="inc_fax_areacode">
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="inc_fax_number">@DbRes.T("fax > Number","계정.개인정보.필드")</label>
+                      <input type="text" class="form-control" id="inc_fax_number" name="inc_fax_number">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_company_name" class="col-sm-3">@DbRes.T("Company Name","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="inc_company_name" name="inc_company_name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_business_type" class="col-sm-3">@DbRes.T("Business Type","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="inc_business_type" name="inc_business_type">
+                    <option value="">- Please select one -</option>
+                    <option value="Buying Office">Buying Office</option>
+                    <option value="Manufacturer">Manufacturer</option>
+                    <option value="Trading Company">Trading Company</option>
+                    <option value="Distributor/Wholesaler">Distributor/Wholesaler</option>
+                    <option value="Retailer">Retailer</option>
+                    <option value="Broker, Consultant commission-based">Broker, Consultant commission-based</option>
+                    <option value="Government Agency / Organization">Government Agency / Organization</option>
+                    <option value="Other">Other</option>
+
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">@DbRes.T("Website","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <label for="inc_have_website_yes" class="radio-inline"><input type="radio" id="inc_have_website_yes" name="inc_have_website" value="yes">I have one</label>
+                  <label for="inc_have_website_no" class="radio-inline"><input type="radio" id="inc_have_website_no" name="inc_have_website" value="no">I don't have one</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- More Information 시작 -->
+          <div class="more-info">
+            <h1>More Information</h1>
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="inc_our_industry" class="col-sm-3">@DbRes.T("Industry we are in","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="inc_our_industry" name="inc_our_industry">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">@DbRes.T("Product we source","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <div class="form-group">
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" name="inc_product_name1" placeholder="product name">
+                    </div>
+                    <div class="col-sm-6">
+                      <select class="form-control">
+                        <option value="">-select corrensponding category-</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" name="inc_product_name2" placeholder="product name">
+                    </div>
+                    <div class="col-sm-6">
+                      <select class="form-control">
+                        <option value="">-select corrensponding category-</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" name="inc_product_name3" placeholder="product name">
+                    </div>
+                    <div class="col-sm-6">
+                      <select class="form-control">
+                        <option value="">-select corrensponding category-</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_purchasing_Frequency" class="col-sm-3">@DbRes.T("Purchasing Frequency","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="inc_purchasing_Frequency" name="inc_purchasing_Frequency">
+                    <option value="">- Please select one -</option>
+                    <option value="Less than one month">Less than one month</option>
+                    <option value="One month">One month</option>
+                    <option value="One quarter">One quarter</option>
+                    <option value="Half a year">Half a year</option>
+                    <option value="One year">One year</option>
+                    <option value="Long than one year">Long than one year</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_annual_purchase_volume" class="col-sm-3">@DbRes.T("Annual Purchase Volume","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="inc_annual_purchase_volume" name="inc_annual_purchase_volume">
+                    <option value="">- Please select one -</option>
+                    <option value="Below US$10,000">Below US$10,000</option>
+                    <option value="US$10,000 - US$100,000">US$10,000 - US$100,000</option>
+                    <option value="US$100,000 - US$300,000">US$100,000 - US$300,000</option>
+                    <option value="US$300,000 - US$500,000">US$300,000 - US$500,000</option>
+                    <option value="US$500,000 - US$1 Million">US$500,000 - US$1 Million</option>
+                    <option value="US$1 Million - US$5 Million">US$1 Million - US$5 Million</option>
+                    <option value="Above US$5 Million">Above US$5 Million</option>
+
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">@DbRes.T("Preferred Supplier Location","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <!-- [추가작업]나라옵션 가져오기 -->
+                      <select class="form-control" id="inc_preferred_supplier_location1" name="inc_preferred_supplier_location1">
+                        <option value="">-please select one-</option>
+
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <!-- [추가작업]나라옵션 가져오기 -->
+                      <select class="form-control" id="inc_preferred_supplier_location2" name="inc_preferred_supplier_location2">
+                        <option value="">-please select one-</option>
+
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <!-- [추가작업]나라옵션 가져오기 -->
+                      <select class="form-control" id="inc_preferred_supplier_location3" name="inc_preferred_supplier_location3">
+                        <option value="">-please select one-</option>
+
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">@DbRes.T("Preferred Supplier Type","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="manufacturer">@DbRes.T("Manufacturer","Preferred Supplier Type.Manufacturer")</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="trading_Company">@DbRes.T("Trading Company","Preferred Supplier Type.Trading Company")</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="buying_office">@DbRes.T("Buying Office","Preferred Supplier Type.Buying Office")</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="agent">@DbRes.T("Agent","Preferred Supplier Type.Agent")</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="distributor">@DbRes.T("Distributor/Wholesaler","Preferred Supplier Type.Distributor/Wholesaler")</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="government">@DbRes.T("Government ministry/Bureau/Commission","Preferred Supplier Type.Government ministry/Bureau/Commission")</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="association">@DbRes.T("Association","Preferred Supplier Type.Association")</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="business_service">@DbRes.T("Business Service (Transportation, finance, travel, Ads, etc)","Preferred Supplier Type.Business Service (Transportation, finance, travel, Ads, etc)")</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="inc_preferred_supplier_type" value="other">@DbRes.T("Other","Preferred Supplier Type.Other")</label>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">@DbRes.T("Company Address","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <div class="form-group">
+                    <label for="inc_companyaddress_street" class="col-sm-3">@DbRes.T("Company Address > Street","계정.개인정보.필드")</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_companyaddress_street" name="inc_companyaddress_street">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_companyaddress_city" class="col-sm-3">@DbRes.T("Company Address > City","계정.개인정보.필드")</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_companyaddress_city" name="inc_companyaddress_city">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_companyaddress_province" class="col-sm-3">@DbRes.T("Company Address > Province/State/Country","계정.개인정보.필드")</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_companyaddress_province" name="inc_companyaddress_province">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_companyaddress_country" class="col-sm-3">@DbRes.T("Company Address > Country/Region","계정.개인정보.필드")</label>
+                    <div class="col-sm-6">
+                      <select class="form-control" id="inc_companyaddress_country" name="inc_companyaddress_country">
+                          <!-- [추가]나라 옵션  -->
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inc_companyaddress_zipcode" class="col-sm-3">@DbRes.T("Company Address > Zip Code ","계정.개인정보.필드")</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="inc_companyaddress_zipcode" name="inc_companyaddress_zipcode">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_company_introduction" class="col-sm-3">@DbRes.T("Company Introduction","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <textarea class="form-control" id="inc_company_introduction" name="inc_company_introduction" rows="8" cols="80"></textarea>
+                  <div class="remark textarea-remark">
+                    Remaining:
+                    <span class="remark-count"></span>
+                  </div>
+
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3">@DbRes.T("Company Logo","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <img src="" alt="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inc_company_introduction" class="col-sm-3">@DbRes.T("Company License","계정.개인정보.필드")</label>
+                <div class="col-sm-9">
+                  <!-- [추가작업]이미지 업로드 -->
+                  <div class="">
+                    <input type="file" name="inc_license_file" value="">
+                    <span><a href="#">Remove All</a></span>
+                  </div>
+                  <div class="">
+
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <button type="button" class="btn btn-submit" name="button">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--
+  [Name]
+  inc_business_pattern
+  inc_first_name
+  inc_last_name
+  inc_gender
+  inc_job_title
+  inc_email
+  inc_address_street
+  inc_address_city
+  inc_address_province
+  inc_address_country
+  inc_address_zipcode
+  inc_tel_contrycode
+  inc_tel_areacode
+  inc_tel_number
+  inc_fax_contrycode
+  inc_fax_areacode
+  inc_fax_number
+  inc_company_name
+  inc_business_type
+  inc_have_website
+  inc_our_industry
+  inc_product_name1
+  inc_product_name2
+  inc_product_name3
+  inc_purchasing_Frequency
+  inc_annual_purchase_volume
+  inc_preferred_supplier_location1
+  inc_preferred_supplier_location2
+  inc_preferred_supplier_location3
+  inc_preferred_supplier_type
+  inc_companyaddress_street
+  inc_companyaddress_city
+  inc_companyaddress_province
+  inc_companyaddress_country
+  inc_companyaddress_zipcode
+  inc_company_introduction
+  inc_license_file -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script type="text/javascript" src="js/script.js">
+  </script>
+</body>
+
+</html>

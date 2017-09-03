@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>Business Type</title>
+</head>
+
+<body>
+
+  <div class="company-info business-type">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- 패널시작 -->
+          <div class="panel">
+            <!-- panel-heading 시작 -->
+            <div class="panel-heading">
+              <h1>Manage Company Information</h1>
+            </div>
+            <!-- panel-body 시작 -->
+            <div class="panel-body">
+              <form class="form-horizontal">
+                <div class="col-sm-6">
+                  <label class="col-sm-3 control-label">@DbRes.T("Business Type","계정.회사정보.필드")</label>
+                  <div class="col-sm-9">
+                    <div class="checkbox">
+                      <label for="inc_businesstype_manufacturer"><input type="checkbox" id="inc_businesstype_manufacturer" name="inc_business_type" value="manufacturer">@DbRes.T("Manufacturer","Business Type.Manufacturer")</label>
+                    </div>
+                    <div class="checkbox">
+                      <label for="inc_businesstype_tradingcompany"><input type="checkbox" id="inc_businesstype_tradingcompany" name="inc_business_type" value="trading_company">@DbRes.T("Trading Company","Business Type.Trading Company")</label>
+                    </div>
+                    <div class="checkbox">
+                      <label for="inc_businesstype_buyingoffice"><input type="checkbox" id="inc_businesstype_buyingoffice" name="inc_business_type" value="buying_office">@DbRes.T("Buying Office","Business Type.Buying Office")</label>
+                    </div>
+                    <div class="checkbox">
+                      <label for="inc_businesstype_agent"><input type="checkbox" id="inc_businesstype_agent" name="inc_business_type" value="agent">@DbRes.T("Agent","Business Type.Agent")</label>
+                    </div>
+                    <div class="checkbox">
+                      <label for="inc_businesstype_distributor"><input type="checkbox" id="inc_businesstype_distributor" name="inc_business_type" value="distributor">@DbRes.T("Distributor/Wholesaler","Business Type.Distributor/Wholesaler")</label>
+                    </div>
+                    <div class="checkbox">
+                      <label for="inc_businesstype_government"><input type="checkbox" id="inc_businesstype_government" name="inc_business_type" value="government">@DbRes.T("Government ministry/Bureau/Commission","Business Type.Government ministry/Bureau/Commission") </label>
+                    </div>
+                    <div class="checkbox">
+                      <label for="inc_businesstype_association"><input type="checkbox" id="inc_businesstype_association" name="inc_business_type" value="association">@DbRes.T("Association","Business Type.Association")</label>
+                    </div>
+                    <div class="checkbox">
+                      <label for="inc_businesstype_service"><input type="checkbox" id="inc_businesstype_service" name="inc_business_type" value="business_service">@DbRes.T("Business Service (Transportation, finance, travel, Ads, etc)","Business Type.Business Service (Transportation, finance, travel, Ads, etc)")</label>
+                    </div>
+                    <div class="checkbox">
+                      <label for="inc_businesstype_other"><input type="checkbox" id="inc_businesstype_other" name="inc_business_type" value="other">@DbRes.T("Other","Business Type.Other")</label>
+                    </div>
+                    <div class="remark">
+                      <span>Select up to 3 Business Types</span>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- panel-footer 시작 -->
+            <div class="panel-footer">
+              <div class="btn-wrap">
+                <button type="button" class="btn btn-next" name="button">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+  [Name]
+  inc_business_type
+  -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script type="text/javascript" src="js/script.js">
+  </script>
+</body>
+
+</html>

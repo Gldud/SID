@@ -1,0 +1,24 @@
+{
+  "name": "sid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gldud",
+  "license": "ISC",
+  "dependencies": {
+    "normalize.less": "^1.0.0"
+  },
+  "devDependencies": {
+    "font-awesome": "^4.7.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-font-awesome-vars": "^1.0.1",
+    "grunt-serve": "^0.1.6",
+    "grunt-spritesmith": "^6.4.0",
+    "serve": "^6.0.6"
+  }
+}

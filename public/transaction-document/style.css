@@ -1,0 +1,594 @@
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif !important;
+  background-color: #fff;
+  letter-spacing: -0.2px;
+  overflow-x: hidden;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-size: 12px;
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.border {
+  border-bottom: 1px solid #000;
+}
+/* ==========================================================================
+Wrapper
+========================================================================== */
+.ddh_wrapper {
+  max-width: 900px;
+  margin: 100px auto 200px;
+  padding: 20px 0 100px;
+  width: 100%;
+  border: 2px solid #000;
+}
+/* ==========================================================================
+Title
+========================================================================== */
+.ddh_head_title {
+  font-size: 30px;
+  text-align: center;
+}
+.ddh_sub_inspection_title {
+  font-size: 16px;
+}
+.ddh_sub_terms_title {
+  font-size: 16px;
+  text-align: center;
+}
+/* ==========================================================================
+Table
+========================================================================== */
+.ddh_table_common table {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-collapse: collapse;
+}
+.ddh_table_common table tr td,
+.ddh_table_common table tr th {
+  padding: 0 5px;
+  height: 30px;
+  border: 1px solid #000;
+}
+.ddh_table_common table tr td:first-child,
+.ddh_table_common table tr td:last-child,
+.ddh_table_common table tr th:first-child,
+.ddh_table_common table tr th:last-child {
+  border-left: 0;
+  border-right: 0;
+}
+.ddh_table_invoice table thead th.number {
+  width: 10%;
+}
+.ddh_table_invoice table thead th.description {
+  width: 28%;
+}
+.ddh_table_invoice table thead th.price {
+  width: 15%;
+}
+.ddh_table_invoice table thead th.quantity {
+  width: 23%;
+}
+.ddh_table_invoice table thead th.total {
+  width: 10%;
+}
+.ddh_table_invoice table tbody tr td:nth-child(4) {
+  text-align: right;
+}
+.ddh_table_invoice table tfoot tr td {
+  font-weight: 600;
+}
+.ddh_table_invoice table tfoot tr td:first-child {
+  text-align: center;
+}
+.ddh_table_invoice table tfoot tr td:nth-child(2) {
+  text-align: right;
+}
+.ddh_table_terms table tr td,
+.ddh_table_terms table tr th {
+  border-left: 0;
+  border-right: 0;
+}
+.ddh_table_terms table tr th {
+  width: 10%;
+}
+.ddh_table_terms table tr td:last-child {
+  border-left: 1px solid #000;
+}
+.ddh_table_terms table tr:last-child span {
+  display: block;
+}
+.ddh_table_inspection_information table thead th {
+  height: 35px;
+}
+.ddh_table_inspection_information table thead th.code {
+  width: 15%;
+}
+.ddh_table_inspection_information table thead th.name {
+  width: 20%;
+}
+.ddh_table_inspection_information table thead th.quantity {
+  width: 15%;
+}
+.ddh_table_inspection_information table thead th.remark {
+  width: 15%;
+}
+.ddh_table_inspection_information table tbody td {
+  text-align: center;
+}
+.ddh_table_inspection_information table tbody td:first-child,
+.ddh_table_inspection_information table tbody td:nth-child(3) {
+  text-align: left;
+}
+.ddh_table_inspection_information table tbody td:first-child {
+  padding-left: 17px;
+}
+.ddh_table_inspection_information table tbody td:nth-child(3) {
+  padding-left: 60px;
+}
+.ddh_table_inspection_information table tfoot {
+  border-top: 2px solid #000;
+}
+.ddh_table_inspection_method table thead th {
+  height: 35px;
+}
+.ddh_table_inspection_method table thead th.item {
+  width: 35%;
+  padding-left: 17px;
+  text-align: left;
+}
+.ddh_table_inspection_method table thead th.fail {
+  width: 15%;
+}
+.ddh_table_inspection_method table thead th.remark {
+  width: 15%;
+}
+.ddh_table_inspection_method table tbody td:first-child {
+  padding-left: 17px;
+}
+.ddh_table_inspection_method table tfoot td {
+  padding-left: 17px;
+}
+.ddh_table_inspection_check table tr th {
+  width: 20%;
+  padding-left: 17px;
+  text-align: left;
+}
+.ddh_table_inspection_check table tr td:last-child {
+  border-left: 1px solid #000;
+}
+.ddh_table_invoice_original table tr td {
+  text-align: center;
+}
+.ddh_table_invoice_original table thead tr th.number {
+  width: 10%;
+}
+.ddh_table_invoice_original table thead tr th.description {
+  width: 28%;
+}
+.ddh_table_invoice_original table thead tr th.price {
+  width: 15%;
+}
+.ddh_table_invoice_original table thead tr th.quantity {
+  width: 23%;
+}
+.ddh_table_invoice_original table thead tr th.total {
+  width: 10%;
+}
+.ddh_table_invoice_original table tbody tr td:nth-child(3) {
+  text-align: right;
+}
+.ddh_table_invoice_payment table tr th {
+  width: 10%;
+  text-align: left;
+}
+.ddh_table_invoice_payment table tr td:last-child {
+  border-left: 1px solid #000;
+}
+.ddh_table_invoice_form {
+  position: relative;
+}
+.ddh_table_invoice_form table {
+  border-top: 0;
+}
+.ddh_table_invoice_form table thead tr th {
+  border: 0;
+  border-left: 1px solid #000;
+}
+.ddh_table_invoice_form table thead tr th:last-child {
+  border-left: 1px solid #000;
+}
+.ddh_table_invoice_form table thead tr th.description {
+  width: 27.5%;
+  border-left: 0;
+  text-align: left;
+}
+.ddh_table_invoice_form table thead tr th.quantity {
+  width: 22.6%;
+}
+.ddh_table_invoice_form table thead tr th.carton {
+  width: 15%;
+}
+.ddh_table_invoice_form table thead tr th.net-weight {
+  width: 15%;
+}
+.ddh_table_invoice_form table tbody tr td {
+  border: 0;
+  text-align: center;
+}
+.ddh_table_invoice_form table tbody tr td:first-child {
+  padding-left: 15px;
+  text-align: left;
+}
+.ddh_table_invoice_form table tbody tr td .num {
+  display: inline-block;
+  width: 50px;
+}
+.ddh_table_invoice_form table tbody tr:last-child td:nth-child(2) {
+  text-align: right;
+  padding-right: 42px;
+}
+.ddh_table_invoice_form table tbody:before {
+  content: "-";
+  display: block;
+  line-height: 20px;
+  color: transparent;
+}
+.ddh_table_invoice_form table tbody:after {
+  content: "-";
+  display: block;
+  line-height: 20px;
+  color: transparent;
+}
+.ddh_table_invoice_form table tfoot {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+.ddh_table_invoice_form table tfoot tr td {
+  border: 0;
+}
+.ddh_table_invoice_form table tfoot tr td:last-child {
+  text-align: right;
+}
+.ddh_table_commercial_form table thead tr {
+  font-size: 11px;
+}
+.ddh_table_commercial_form table thead tr th {
+  border-left: 1px solid #000;
+}
+.ddh_table_commercial_form table thead tr th.description {
+  width: 50%;
+  border-left: 0;
+  text-align: left;
+}
+.ddh_table_commercial_form table thead tr th.quantity {
+  width: 15%;
+}
+.ddh_table_commercial_form table thead tr th.price {
+  width: 15%;
+}
+.ddh_table_commercial_form table tbody tr:last-child td {
+  padding-top: 30px;
+}
+.ddh_table_commercial_form table tbody tr td:last-child {
+  text-align: right;
+}
+/* ==========================================================================
+Inspection report, Inspection standard, Purchasing order, Proforma invoice, Invoice form, Invoice
+========================================================================== */
+.ddh_contact-point {
+  position: relative;
+  margin-top: 40px;
+}
+.ddh_contact-point .date {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+.ddh_contact-point .sender-wrap {
+  float: left;
+  width: 50%;
+}
+.ddh_contact-point .sender-wrap .inner-wrap {
+  max-width: 400px;
+  margin-left: 60px;
+}
+.ddh_contact-point .sender-wrap .inner-wrap .ddh_sender {
+  float: left;
+}
+.ddh_contact-point .sender-wrap .inner-wrap .ddh_sender-contact-point {
+  margin-left: 60px;
+}
+.ddh_contact-point .receiver-wrap {
+  float: left;
+  width: 50%;
+}
+.ddh_contact-point .receiver-wrap .inner-wrap {
+  max-width: 450px;
+  margin: 0 auto;
+}
+.ddh_contact-point .receiver-wrap .inner-wrap .ddh_receiver {
+  float: left;
+}
+.ddh_contact-point .receiver-wrap .inner-wrap .ddh_receiver-contact-point {
+  margin-left: 70px;
+}
+.ddh_signature-wrap {
+  margin-top: 50px;
+}
+.ddh_signature-wrap .inner-wrap {
+  float: right;
+}
+.ddh_signature-wrap .inner-wrap .request span {
+  display: block;
+  text-align: right;
+}
+.ddh_signature-wrap .inner-wrap .signed-by {
+  margin-top: 50px;
+}
+.ddh_signature-wrap .inner-wrap .signed-by strong {
+  float: right;
+  display: block;
+  width: 175px;
+}
+.ddh_signature-wrap .inner-wrap .seller-signature {
+  margin-top: 50px;
+}
+.ddh_signature-wrap .inner-wrap .seller-signature .inner-wrap {
+  float: right;
+  width: 175px;
+}
+.ddh_signature-wrap .inner-wrap .seller-signature .inner-wrap strong,
+.ddh_signature-wrap .inner-wrap .seller-signature .inner-wrap span {
+  display: block;
+}
+.ddh_signature-wrap .inner-wrap .seller-signature .inner-wrap strong {
+  border-bottom: 1px solid #000;
+}
+.ddh_signature-wrap .inner-wrap .seller-signature .inner-wrap strong span {
+  padding-left: 75px;
+}
+/* ==========================================================================
+Invoice form, Packing List
+========================================================================== */
+.ddh_signature-wrap_v2 {
+  position: relative;
+  margin-top: 300px;
+}
+.ddh_signature-wrap_v2 h2 {
+  position: absolute;
+  top: 0;
+  right: 200px;
+}
+/* ==========================================================================
+Delivery note
+========================================================================== */
+.ddh_signature-wrap_v3 {
+  margin-top: 300px;
+}
+.ddh_signature-wrap_v3 ul li {
+  float: left;
+  width: 50%;
+}
+.ddh_signature-wrap_v3 ul li h2 {
+  text-align: center;
+}
+/* ==========================================================================
+Invoice form, Delivery Note, Packing List
+========================================================================== */
+.ddh_invoice_form h2 {
+  font-size: 11px;
+}
+.ddh_invoice_form .invoice-top {
+  height: 350px;
+  border-top: 2px solid #000;
+  border-bottom: 1px solid #000;
+}
+.ddh_invoice_form .invoice-top .invoice-top-left {
+  width: 50%;
+  height: 100%;
+}
+.ddh_invoice_form .invoice-top .invoice-top-left .shipper {
+  min-height: 107px;
+  padding: 0 3px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-left .sender {
+  min-height: 107px;
+  padding: 0 3px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-left .for-account {
+  min-height: 107px;
+  padding: 0 3px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-left .notify-party {
+  min-height: 96px;
+  padding: 0 3px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-left > .inner-wrap {
+  padding: 0 3px;
+  width: 100%;
+  min-height: 38px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-left > .inner-wrap .location-of-loading {
+  width: 55%;
+}
+.ddh_invoice_form .invoice-top .invoice-top-left > .inner-wrap .port-of-loading {
+  width: 55%;
+}
+.ddh_invoice_form .invoice-top .invoice-top-left > .inner-wrap .final-destination {
+  padding: 0 3px;
+  width: 45%;
+  min-height: 38px;
+  border-left: 1px solid #000;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right {
+  width: 50%;
+  height: 100%;
+  border-left: 1px solid #000;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right .bl-no {
+  padding: 0 3px;
+  min-height: 35px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right .bl-no .inner-wrap .fl {
+  padding-left: 5px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right .bl-no .inner-wrap .fr {
+  padding-right: 20px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right .invoice-no {
+  padding: 0 3px;
+  min-height: 35px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right .invoice-no .inner-wrap .fl {
+  padding-left: 5px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right .invoice-no .inner-wrap .fr {
+  padding-right: 20px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right .tracking-no {
+  padding: 0 3px;
+  min-height: 35px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right .remark {
+  position: relative;
+  padding: 0 3px;
+  min-height: 240px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right .remark span {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right .lc-no {
+  padding: 0 3px;
+  min-height: 35px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right .fill-out {
+  position: relative;
+  padding: 0 3px;
+  min-height: 240px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right .fill-out span {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right > .inner-wrap {
+  padding: 0 3px;
+  min-height: 38px;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right > .inner-wrap .carrier {
+  width: 60%;
+}
+.ddh_invoice_form .invoice-top .invoice-top-right > .inner-wrap .sailing-on {
+  padding: 0 3px;
+  width: 40%;
+  min-height: 38px;
+  border-left: 1px solid #000;
+}
+.ddh_invoice_form .invoice-bottom span.remark {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+}
+/* ==========================================================================
+Inspection report, Inspection standard
+========================================================================== */
+.ddh_report-wrap {
+  margin-top: 20px;
+}
+.ddh_report-wrap em {
+  font-weight: 400;
+}
+.ddh_report-wrap .remark {
+  padding-left: 20px;
+}
+.ddh_report-wrap .how-to-inspection {
+  margin-top: 20px;
+}
+.ddh_report-wrap .inspection-check-list {
+  margin-top: 20px;
+}
+.ddh_attachment {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.ddh_attachment ol li {
+  list-style: decimal;
+}
+/* ==========================================================================
+Purchasing order, Proforma order
+========================================================================== */
+.ddh_terms {
+  margin-top: 20px;
+}
+/* ==========================================================================
+Invoice
+========================================================================== */
+.invoice .invoice-table {
+  margin-top: 20px;
+}
+.invoice .payment-detail {
+  margin-top: 40px;
+}
+/* ==========================================================================
+Proforma invoice
+========================================================================== */
+.proforma-invoice .invoice-wrap {
+  margin-top: 20px;
+}
+/* ==========================================================================
+Purchasing order
+========================================================================== */
+.purchasing-order .invoice-wrap {
+  margin-top: 20px;
+}
