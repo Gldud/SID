@@ -1,0 +1,495 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', 'Noto Sans KR', sans-serif !important;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-size: 13px;
+  color: #1b1b1b;
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+h2.main-title {
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.screen-reader-text {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.screen-reader-text:focus {
+  top: 5px;
+  left: 5px;
+  clip: auto !important;
+  display: block;
+  padding: 15px 23px 14px;
+  width: auto;
+  height: auto;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #21759b;
+  text-decoration: none;
+  line-height: normal;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  z-index: 100000;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.btn {
+  display: inline-block;
+  background: none;
+  border: none;
+}
+.content-grid {
+  max-width: 748px;
+  margin: 0 auto;
+  width: 100%;
+}
+.mailing-product-ad .top-info {
+  margin-bottom: 8px;
+  padding: 0 35px;
+}
+.mailing-product-ad .top-info .inner-wrap {
+  position: relative;
+}
+.mailing-product-ad .top-info .inner-wrap .top-remark {
+  font-size: 11px;
+  color: #898989;
+}
+.mailing-product-ad .top-info .inner-wrap .top-remark span {
+  display: block;
+}
+.mailing-product-ad .top-info .inner-wrap .top-remark span a {
+  color: #898989;
+}
+.mailing-product-ad .top-info .inner-wrap .sns-link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.mailing-product-ad .top-info .inner-wrap .sns-link ul {
+  font-size: 0;
+}
+.mailing-product-ad .top-info .inner-wrap .sns-link ul li {
+  display: inline-block;
+  margin-left: 9px;
+}
+.mailing-product-ad .top-info .inner-wrap .sns-link ul li a {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+}
+.mailing-product-ad .top-info .inner-wrap .sns-link ul li .facebook-link {
+  background-image: url(images/facebook.png);
+}
+.mailing-product-ad .top-info .inner-wrap .sns-link ul li .linkedin-link {
+  background-image: url(images/linkedin.png);
+}
+.mailing-product-ad .wrapper {
+  padding: 65px 35px;
+  background-color: #eee;
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .upnav {
+  margin-bottom: 27px;
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .upnav h1 a {
+  display: block;
+  width: 130px;
+  height: 35px;
+  background-image: url(images/logo.png);
+  background-repeat: no-repeat;
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .gnb ul {
+  font-size: 0;
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .gnb ul li {
+  display: inline-block;
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .gnb ul li a {
+  display: block;
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .category-nav {
+  border-bottom: 1px solid #1b1b1b;
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .category-nav ul {
+  font-size: 0;
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .category-nav ul li {
+  display: inline-block;
+  padding-right: 21.4px;
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .category-nav ul li a {
+  display: inline-block;
+  color: #1b1b1b;
+  padding-bottom: 8px;
+  border-bottom: 1px transparent solid;
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .category-nav ul li a h2 {
+  font-weight: 400;
+  font-size: 12px;
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .category-nav ul li a:hover {
+  color: #eb0009;
+  border-bottom: 1px #eb0009 solid;
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .category-nav ul li:last-child {
+  padding-right: 0;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main {
+  margin-top: 30px;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item {
+  background-color: #fff;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item ul {
+  font-size: 0;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item ul li {
+  width: 50%;
+  display: inline-block;
+  border-bottom: 1px #eee solid;
+  border-right: 1px #eee solid;
+  text-align: center;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item ul li a {
+  display: block;
+  padding: 25px 30px 33px;
+  color: #1b1b1b;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item ul li a .category-item_img {
+  margin: 0 auto;
+  max-width: 280px;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item ul li a .category-item_img img {
+  max-width: 100%;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item ul li a .category-item_title {
+  margin-top: 11px;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item ul li a .category-item_title h3 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #1b1b1b;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item ul li a .category-item_price {
+  margin-top: 13px;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item ul li a .category-item_price .reduced-price-wrap .reduced-price {
+  font-size: 18px;
+  color: #eb0009;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item ul li a .category-item_price .reduced-price-wrap .scc_piece {
+  font-size: 14px;
+  color: #7b7b7b;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item ul li a .category-item_price .original-price-wrap {
+  display: block;
+  margin-top: 2px;
+  font-size: 16px;
+  color: #707070;
+  text-decoration: line-through;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item ul li:nth-child(2),
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item ul li:nth-child(4) {
+  border-right: none;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item ul li:nth-child(3),
+.mailing-product-ad .wrapper .category-wrap .category-main .category-item ul li:nth-child(4) {
+  border-bottom: none;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .start-sid {
+  margin-top: 50px;
+  text-align: center;
+}
+.mailing-product-ad .wrapper .category-wrap .category-main .start-sid .btn {
+  width: 258px;
+  height: 50px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #eb0009;
+  border-radius: 3px;
+}
+.mailing-product-ad .footer {
+  margin-top: 25px;
+  padding: 0 35px;
+}
+.mailing-product-ad .footer .inner-wrap .info p {
+  margin: 0 0 5px;
+  font-size: 11px;
+  color: #898989;
+}
+.mailing-product-ad .footer .inner-wrap .info p a {
+  color: #eb0009;
+}
+.mailing-product-ad .footer .inner-wrap .info .download-app {
+  margin-bottom: 1px;
+}
+.mailing-product-ad .footer .inner-wrap .info .download-app a {
+  display: inline-block;
+  width: 88px;
+  height: 27px;
+  background-repeat: no-repeat;
+  vertical-align: -9px;
+}
+.mailing-product-ad .footer .inner-wrap .info .download-app .google-play {
+  margin-left: 4px;
+  background-image: url(images/google.png);
+}
+.mailing-product-ad .footer .inner-wrap .info .download-app .app-store {
+  margin-left: 2px;
+  background-image: url(images/apple.png);
+}
+.mailing-text {
+  background-color: #eee;
+}
+.mailing-text .wrapper {
+  padding: 63px 60px 84px;
+  background-color: #fff;
+}
+.mailing-text .wrapper .header {
+  padding-bottom: 18px;
+  border-bottom: 2px solid #000;
+}
+.mailing-text .wrapper .header .nav {
+  position: relative;
+}
+.mailing-text .wrapper .header .nav h1 a {
+  display: block;
+  width: 130px;
+  height: 35px;
+  background-image: url(images/logo.png);
+  background-repeat: no-repeat;
+}
+.mailing-text .wrapper .header .nav .gnb {
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+}
+.mailing-text .wrapper .header .nav .gnb ul li {
+  position: relative;
+  display: inline-block;
+  padding-left: 16px;
+}
+.mailing-text .wrapper .header .nav .gnb ul li a {
+  color: #1b1b1b;
+}
+.mailing-text .wrapper .header .nav .gnb ul li a h2 {
+  font-size: 12px;
+  font-weight: 400;
+}
+.mailing-text .wrapper .header .nav .gnb ul li:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  display: inline-block;
+  width: 1px;
+  height: 8px;
+  background-color: #1b1b1b;
+}
+.mailing-text .wrapper .header .nav .gnb ul li:first-child:before {
+  display: none;
+}
+.mailing-text .wrapper .mailing-main {
+  padding-top: 30px;
+}
+.mailing-text .wrapper .mailing-main .text-content {
+  padding-bottom: 53px;
+  font-size: 14px;
+}
+.mailing-text .wrapper .mailing-main .text-content .text-wrap h3 {
+  margin-bottom: 13px;
+  font-size: 24px;
+  font-weight: 400;
+}
+.mailing-text .wrapper .mailing-main .text-content .text-wrap p {
+  margin: 0 0 2px;
+}
+.mailing-text .wrapper .mailing-main .text-content .login-details {
+  margin-top: 50px;
+}
+.mailing-text .wrapper .mailing-main .text-content .login-details h4 {
+  margin-bottom: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.mailing-text .wrapper .mailing-main .text-content .login-details ul {
+  padding: 13px 0;
+  border-top: 1px solid #1b1b1b;
+  border-bottom: 1px solid #1b1b1b;
+}
+.mailing-text .wrapper .mailing-main .text-content .login-details ul li span {
+  font-size: 12px;
+}
+.mailing-text .wrapper .mailing-main .text-content .login-details ul li strong {
+  font-weight: 400;
+}
+.mailing-text .wrapper .mailing-main .start-sid {
+  text-align: right;
+}
+.mailing-text .wrapper .mailing-main .start-sid .inner-wrap {
+  float: right;
+}
+.mailing-text .wrapper .mailing-main .start-sid .inner-wrap .btn {
+  width: 110px;
+  height: 38px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #eb0009;
+  border-radius: 3px;
+}
+.mailing-text .wrapper .mailing-main .start-sid .inner-wrap p {
+  font-size: 12px;
+}
+.mailing-text .footer {
+  height: 140px;
+  background-color: #000;
+  text-align: center;
+}
+.mailing-text .footer .footer-nav {
+  padding-top: 33px;
+}
+.mailing-text .footer .footer-nav .sns-link {
+  display: inline-block;
+  vertical-align: -13px;
+}
+.mailing-text .footer .footer-nav .sns-link ul {
+  font-size: 0;
+}
+.mailing-text .footer .footer-nav .sns-link ul li {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 1px #fff solid;
+  border-radius: 50%;
+}
+.mailing-text .footer .footer-nav .sns-link ul li a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+.mailing-text .footer .footer-nav .sns-link ul li .facebook-link {
+  width: 10px;
+  height: 16px;
+  background-image: url(images/facebook02.png);
+}
+.mailing-text .footer .footer-nav .sns-link ul li .linkedin-link {
+  width: 14px;
+  height: 16px;
+  background-image: url(images/linkedin02.png);
+}
+.mailing-text .footer .footer-nav .sns-link ul li:last-child {
+  margin-left: 9px;
+}
+.mailing-text .footer .footer-nav .download-app {
+  display: inline-block;
+  margin-left: 13px;
+}
+.mailing-text .footer .footer-nav .download-app span {
+  font-size: 10px;
+  color: #fff;
+}
+.mailing-text .footer .footer-nav .download-app ul {
+  display: inline-block;
+  margin-left: 3px;
+  font-size: 0;
+}
+.mailing-text .footer .footer-nav .download-app ul li {
+  display: inline-block;
+}
+.mailing-text .footer .footer-nav .download-app ul li a {
+  display: inline-block;
+  width: 88px;
+  height: 27px;
+  background-repeat: no-repeat;
+  vertical-align: -9px;
+}
+.mailing-text .footer .footer-nav .download-app ul li .google-play {
+  margin-left: 4px;
+  background-image: url(images/google.png);
+}
+.mailing-text .footer .footer-nav .download-app ul li .app-store {
+  margin-left: 2px;
+  background-image: url(images/apple.png);
+}
+.mailing-text .footer .footer-nav .download-app ul li:last-child {
+  margin-left: 3px;
+}
+.mailing-text .footer .copyright-wrap {
+  margin-top: 26px;
+  font-size: 11px;
+  color: #707070;
+  text-align: center;
+}

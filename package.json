@@ -9,6 +9,7 @@
   "author": "gldud",
   "license": "ISC",
   "dependencies": {
+    "grunt-contrib-connect": "^1.0.2",
     "normalize.less": "^1.0.0"
   },
   "devDependencies": {
