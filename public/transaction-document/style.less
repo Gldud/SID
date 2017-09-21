@@ -10,13 +10,12 @@ body, html {
   width: 100%;
   height: 100%;
   font-family: 'Open Sans', sans-serif !important;
+  font-size: 13px;
   background-color: #fff;
-  letter-spacing: -0.2px;
-  overflow-x: hidden;
 }
 
 body, button, input, select, textarea {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
@@ -56,726 +55,370 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
 Wrapper
 ========================================================================== */
+
 .ddh_wrapper{
-  max-width: 900px;
+
+  width: 800px;
   margin: 100px auto 200px;
-  padding: 20px 0 100px;
-  width:100%;
+  padding: 30px;
   border: 2px solid #000;
 }
 
 /* ==========================================================================
-Title
+Main Title
 ========================================================================== */
-//title 공통
-.ddh_head_title{
-  font-size: 30px;
-  text-align: center;
-}
-
-
-//Inspection report, Inspection standard
-.ddh_sub_inspection_title{
-  font-size: 16px;
-}
-
- //Purchasing order, Proforma invoice
-.ddh_sub_terms_title{
-  font-size: 16px;
-  text-align: center;
-
-}
-/* ==========================================================================
-Table
-========================================================================== */
-
-//table 공통
-.ddh_table_common{
-  table{
-    margin: 0;
-    padding: 0;
-    width:100%;
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
-    border-collapse: collapse;
-    tr{
-      td,th{
-        padding: 0 5px;
-        height: 30px;
-        border:1px solid #000;
-      }
-      td:first-child,
-      td:last-child,
-      th:first-child,
-      th:last-child{
-        border-left: 0;
-        border-right: 0;
-      }
-    }
-  }
-}
-
-//Proforma invoice, Purchasing order
-.ddh_table_invoice{
-  table{
-    thead{
-      th.number{
-        width:10%;
-      }
-      th.description{
-        width:28%;
-      }
-      th.price{
-        width:15%;
-      }
-      th.quantity{
-        width:23%;
-      }
-      th.total{
-        width:10%;
-      }
-    }
-    tbody{
-      tr{
-        td{
-          &:nth-child(4){
-            text-align: right;
-          }
-        }
-      }
-    }
-    tfoot{
-      tr{
-        td{
-          font-weight: 600;
-          &:first-child{
-            text-align: center;
-          }
-          &:nth-child(2){
-            text-align: right;
-          }
-        }
-      }
-    }
-  }
-}
-
-.ddh_table_terms{
-  table{
-    tr{
-      td,th{
-        border-left: 0;
-        border-right: 0;
-      }
-      th{
-        width: 10%;
-      }
-      td{
-        &:last-child{
-          border-left: 1px solid #000;
-        }
-
-      }
-      &:last-child{
-        span{
-          display: block;
-        }
-      }
-    }
-  }
-}
-
-//Inspection report, Inspection-standard
-.ddh_table_inspection_information{
-  table{
-    thead{
-      th{
-        height: 35px;
-      }
-      th.code{
-        width:15%;
-      }
-      th.name{
-        width:20%;
-      }
-      th.quantity{
-        width:15%;
-      }
-      th.remark{
-        width:15%;
-      }
-    }
-    tbody{
-      td{
-        text-align: center;
-        &:first-child,
-        &:nth-child(3){
-          text-align: left;
-        }
-        &:first-child{
-          padding-left: 17px;
-        }
-        &:nth-child(3){
-          padding-left: 60px;
-        }
-      }
-
-    }
-    tfoot{
-      border-top: 2px solid #000;
-    }
-  }
-}
-
-.ddh_table_inspection_method{
-  table{
-    thead{
-      th{
-        height: 35px;
-      }
-      th.item{
-        width:35%;
-        padding-left: 17px;
-        text-align: left;
-      }
-      th.fail{
-        width:15%;
-      }
-      th.remark{
-        width:15%;
-      }
-    }
-    tbody{
-      td{
-        &:first-child{
-          padding-left: 17px;
-        }
-      }
-    }
-    tfoot{
-      td{
-        padding-left: 17px;
-      }
-    }
-  }
-}
-
-.ddh_table_inspection_check{
-  table{
-    tr{
-      th{
-        width:20%;
-        padding-left: 17px;
-        text-align: left;
-      }
-      td{
-        &:last-child{
-          border-left: 1px solid #000;
-        }
-      }
-    }
-  }
-}
-
-//Invoice
-.ddh_table_invoice_original{
-  table{
-    tr{
-      td{
-        text-align: center;
-      }
-    }
-    thead{
-      tr{
-        th.number{
-          width:10%;
-        }
-        th.description{
-          width:28%;
-        }
-        th.price{
-          width:15%;
-        }
-        th.quantity{
-          width:23%;
-        }
-        th.total{
-          width:10%;
-        }
-      }
-    }
-    tbody{
-      tr{
-        td{
-          &:nth-child(3){
-            text-align: right;
-          }
-        }
-      }
-    }
-  }
-}
-
-.ddh_table_invoice_payment{
-  table{
-    tr{
-      th{
-        width: 10%;
-        text-align: left;
-      }
-      td{
-        &:last-child{
-          border-left: 1px solid #000;
-        }
-
-      }
-    }
-  }
-}
-
-//Packing List, Delivery Note
-.ddh_table_invoice_form{
-  position: relative;
-  table{
-    border-top: 0;
-    thead{
-      tr{
-        th{
-          border: 0;
-          border-left: 1px solid #000;
-          &:last-child{
-            border-left: 1px solid #000;
-          }
-        }
-        th.description{
-          width:27.5%;
-          border-left: 0;
-          text-align: left;
-        }
-        th.quantity{
-          width: 22.6%;
-        }
-        th.carton{
-          width:15%;
-        }
-        th.net-weight{
-          width:15%;
-        }
-
-      }
-    }
-    tbody{
-      tr{
-        td{
-          border: 0;
-          text-align: center;
-          &:first-child{
-            padding-left: 15px;
-            text-align: left;
-          }
-
-          .num{
-            display: inline-block;
-            width:50px;
-
-          }
-        }
-
-        &:last-child{
-          td{
-            &:nth-child(2){
-              text-align: right;
-              padding-right: 42px;
-            }
-          }
-        }
-      }
-      &:before{
-        content: "-";
-        display: block;
-        line-height: 20px;
-        color: transparent;
-      }
-      &:after{
-        content: "-";
-        display: block;
-        line-height: 20px;
-        color: transparent;
-      }
-    }
-    tfoot{
-
-      border-top: 2px solid #000;
-      border-bottom: 2px solid #000;
-      tr{
-        td{
-          border: 0;
-          &:last-child{
-            text-align: right;
-          }
-        }
-      }
-
-    }
-  }
-}
-
-.ddh_table_commercial_form{
-  table{
-    thead{
-      tr{
-        font-size: 11px;
-        th{
-          border-left: 1px solid #000;
-        }
-        th.description{
-          width:50%;
-          border-left: 0;
-          text-align: left;
-        }
-        th.quantity{
-          width:15%;
-        }
-        th.price{
-          width:15%;
-        }
-
-      }
-    }
-    tbody{
-      tr{
-        &:last-child{
-          td{
-            padding-top: 30px;
-          }
-        }
-        td{
-          &:last-child{
-            text-align: right;
-          }
-        }
-      }
-    }
-  }
+.main-title{
+  font-size: 35px;
+  text-transform: uppercase;
 }
 
 /* ==========================================================================
-Inspection report, Inspection standard, Purchasing order, Proforma invoice, Invoice form, Invoice
+Top
 ========================================================================== */
-
-.ddh_contact-point{
+.main-content{
+  margin-top: 80px;
+}
+.top-info{
   position: relative;
-  margin-top: 40px;
   .date{
-    position: absolute;
-    top:30px;
-    right:20px;
+    display: inline-block;
+    strong{
+      font-size: 12px;
+    }
+    span{
+      font-size: 13px;
+    }
   }
 
+  .page{
+    display: inline-block;
+    margin-left: 50px;
+    strong{
+      font-size: 12px;
+    }
+    span{
+      font-size: 13px;
+    }
+  }
+  .logo-mark{
+    position: absolute;
+    top: 0;
+    right: 0;
+    h1{
+      width: 142px;
+      height: 142px;
+      background-image: url(images/mark.png);
+    }
+
+  }
+}
+
+/* ==========================================================================
+contact point
+========================================================================== */
+.contact-point{
+  margin-top: 30px;
   .sender-wrap{
     float: left;
-    width:50%;
+    width: 50%;
+    .sender{
+      font-size: 11px;
+    }
+    .sender-contact{
 
-    .inner-wrap{
-      max-width: 400px;
-      margin-left: 60px;
-      .ddh_sender{
-        float: left;
-      }
-      .ddh_sender-contact-point{
-        margin-left: 60px;
-
-      }
     }
   }
   .receiver-wrap{
     float: left;
-    width:50%;
+    width: 50%;
+    .receiver{
+      font-size: 11px;
+    }
+    .receiver-contact{
 
-    .inner-wrap{
-      max-width: 450px;
-      margin: 0 auto;
-      .ddh_receiver{
-        float: left;
-      }
-      .ddh_receiver-contact-point{
-        margin-left: 70px;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+/* ==========================================================================
+Payment Detail
+========================================================================== */
+.payment-detail{
+  margin-top: 60px;
+  .pd_left{
+    float: left;
+    width: 50%;
+  }
+  .pd_right{
+    float: left;
+    width: 50%;
+    table{
+      tr{
+        th.account{
+          vertical-align: top;
+        }
 
       }
     }
 
   }
+  table{
+    tr{
+      th{
+        padding-right: 55px;
+        font-size: 11px;
+        text-align: left;
+      }
+
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
-
-.ddh_signature-wrap{
-  margin-top: 50px;
-  .inner-wrap{
-    float: right;
-    .request{
-      span{
-        display: block;
-        text-align: right;
+/* ==========================================================================
+Terms and Conditions
+========================================================================== */
+.terms{
+    margin-top: 60px;
+  table{
+    tr{
+      th{
+        padding-right: 55px;
+        font-size: 11px;
+        text-align: left;
       }
 
     }
-    .signed-by{
-      margin-top: 50px;
-      strong{
-        float: right;
-        display: block;
-        width:175px;
-
-      }
-    }
-    .seller-signature{
-      margin-top: 50px;
-      .inner-wrap{
-        float: right;
-        width:175px;
-        strong,span{
-          display: block;
+  }
+  .terms_left{
+    float: left;
+    width: 50%;
+  }
+  .terms_right{
+    float: left;
+    width: 50%;
+    table{
+      tr{
+        th{
+          vertical-align: top;
         }
-        strong{
-          border-bottom: 1px solid #000;
-          span{
-            padding-left: 75px;
+
+      }
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+/* ==========================================================================
+Table
+========================================================================== */
+.invoice-table{
+  margin-top: 80px;
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    thead{
+      position: relative;
+      border-bottom: 1px solid #000;
+      tr{
+        th{
+          padding: 5px 0;
+          text-align: left;
+          font-size: 11px;
+        }
+
+
+      }
+      &:after{
+        content:"";
+        display: block;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: 3px;
+        left: 0;
+        background-color: #000;
+      }
+    }
+    tbody{
+      tr{
+        td{
+          padding: 5px 0;
+          &:last-child{
+            text-align: right;
           }
         }
       }
     }
+    tfoot{
+      tr{
+        td{
+          padding: 5px 0;
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4){
+            border-top: 2px solid #000;
+          }
+          &:nth-child(4){
+            text-align: right;
+          }
+
+        }
+        &:last-child{
+
+          td{
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4){
+              border-bottom: 2px solid #000;
+            }
+          }
+        }
+      }
+
+    }
   }
 }
 
-
-/* ==========================================================================
-Invoice form, Packing List
-========================================================================== */
-.ddh_signature-wrap_v2{
+.signature-wrap{
   position: relative;
-  margin-top: 300px;
-  h2{
+  height: 30px;
+  margin-top: 200px;
+  .signature{
     position: absolute;
     top: 0;
-    right: 200px;
+    right: 0;
+        width: 300px;
+        border-top: 1px solid #000;
   }
 }
+.invoice-note-wrap{
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    tr{
+      td{
+        border-bottom: 1px solid #000;
+        vertical-align: top;
+        strong{
+          display: block;
+        }
+      }
+      th{
+        text-align: left;
+        strong{
+          display: block;
 
-/* ==========================================================================
-Delivery note
-========================================================================== */
-.ddh_signature-wrap_v3{
-  margin-top: 300px;
-  ul{
-    li{
-      float: left;
-      width:50%;
-      h2{
-        text-align: center;
+        }
       }
     }
   }
-}
-
-/* ==========================================================================
-Invoice form, Delivery Note, Packing List
-========================================================================== */
-.ddh_invoice_form{
-  h2{
-    font-size: 11px;
-  }
-  .invoice-top{
-    height: 350px;
+  .invoice-note_top{
     border-top: 2px solid #000;
-    border-bottom: 1px solid #000;
-    .invoice-top-left{
-      width:50%;
-      height: 100%;
-
-      .shipper{
-        min-height: 107px;
-        padding: 0 3px;
-      }
-      .sender{
-        min-height: 107px;
-        padding: 0 3px;
-      }
-      .for-account{
-        min-height: 107px;
-        padding: 0 3px;
-      }
-      .notify-party{
-        min-height: 96px;
-        padding: 0 3px;
-      }
-      >.inner-wrap{
-        padding: 0 3px;
-        width:100%;
-        min-height: 38px;
-        .location-of-loading{
-          width:55%;
-        }
-        .port-of-loading{
-          width:55%;
-        }
-        .final-destination{
-          padding: 0 3px;
-          width:45%;
-          min-height: 38px;
-          border-left: 1px solid #000;
-        }
-      }
-
+    .invoice-note_left{
+      float: left;
+      width: 50%;
     }
-    .invoice-top-right{
-      width:50%;
-      height: 100%;
-      border-left: 1px solid #000;
-      .bl-no{
-        padding: 0 3px;
-        min-height: 35px;
-        .inner-wrap{
-          .fl{
-            padding-left: 5px;
-          }
-          .fr{
-            padding-right: 20px;
-          }
-        }
-      }
-      .invoice-no{
-        padding: 0 3px;
-        min-height: 35px;
-        .inner-wrap{
-          .fl{
-            padding-left: 5px;
-          }
-          .fr{
-            padding-right: 20px;
+    .invoice-note_right{
+      float: left;
+      width: 50%;
+      table{
+        tr{
+          td{
+            ul{
+              li{
+                list-style: lower-alpha;
+                list-style-position: inside;
+              }
+            }
           }
         }
       }
-      .tracking-no{
-        padding: 0 3px;
-        min-height: 35px;
-      }
-      .remark{
-        position: relative;
-        padding: 0 3px;
-        min-height: 240px;
-        span{
-          position: absolute;
-          top: 20%;
-          left: 30%;
-        }
-      }
-      .lc-no{
-        padding: 0 3px;
-        min-height: 35px;
-      }
-      .fill-out{
-        position: relative;
-        padding: 0 3px;
-        min-height: 240px;
-        span{
-          position: absolute;
-          top: 20%;
-          left: 30%;
-        }
-      }
-      >.inner-wrap{
-        padding: 0 3px;
-        min-height: 38px;
-        .carrier{
-          width:60%;
-        }
-        .sailing-on{
-          padding: 0 3px;
-          width:40%;
-          min-height: 38px;
-          border-left: 1px solid #000;
-        }
-      }
+    }
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
     }
   }
-  .invoice-bottom{
-    span.remark{
-      position: absolute;
-      top:30px;
-      left:10px;
+  .invoice-note_bottom{
+    border-top: 2px solid #000;
+    table{
+      tr{
+        td{
+          border-bottom: none;
+        }
+      }
+    }
+    tfoot{
+      tr{
+        td{
+          border-top: 2px solid #000;
+          border-bottom: 2px solid #000;
+          &:first-child{
+            border-top: none;
+            border-bottom: none;
+          }
+        }
+      }
+
+
     }
   }
 }
 
 
 /* ==========================================================================
-Inspection report, Inspection standard
+Bottom
 ========================================================================== */
+.bottom-info{
+  margin-top: 80px;
+  font-size: 0;
+  .sk-logo{
+    display: inline-block;
 
-.ddh_report-wrap{
-  margin-top: 20px;
-  em{
-    font-weight: 400;
+    width: 96px;
+    height: 31px;
+    background-image: url(images/sk-logo.png);
+    background-repeat: no-repeat;
   }
-  .remark{
-    padding-left: 20px;
+  .sid-logo{
+    display: inline-block;
+    margin-left: 50px;
+
+    width: 79px;
+    height: 21px;
+    background-image: url(images/sid-logo.png);
   }
-
-  .how-to-inspection{
-    margin-top: 20px;
-
-  }
-  .inspection-check-list{
-    margin-top: 20px;
-
-  }
-}
-
-.ddh_attachment{
-  margin-top: 20px;
-  margin-left: 10px;
-  ol{
-    li{
-      list-style: decimal;
+  .company-address{
+    display: inline-block;
+    margin-left: 70px;
+    font-size: 9px;
+    span{
+      display: block;
     }
   }
-}
-
-/* ==========================================================================
-Purchasing order, Proforma order
-========================================================================== */
-.ddh_terms{
-  margin-top: 20px;
-
-}
-
-/* ==========================================================================
-Invoice
-========================================================================== */
-.invoice{
-  .invoice-table{
-    margin-top: 20px;
-  }
-  .payment-detail{
-    margin-top: 40px;
-  }
-}
-
-/* ==========================================================================
-Proforma invoice
-========================================================================== */
-
-.proforma-invoice{
-  .invoice-wrap{
-    margin-top: 20px;
-  }
-}
-
-/* ==========================================================================
-Purchasing order
-========================================================================== */
-
-.purchasing-order{
-  .invoice-wrap{
-    margin-top: 20px;
+  .contact-info{
+    display: inline-block;
+    margin-left: 45px;
+    ul{
+      li{
+        font-size: 9px;
+        em{
+          display: inline-block;
+          width: 35px;
+        }
+      }
+    }
   }
 }

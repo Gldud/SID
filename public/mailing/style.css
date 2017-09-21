@@ -147,6 +147,7 @@ h2.main-title {
   background-color: #eee;
 }
 .mailing-product-ad .wrapper .category-wrap .category-header .upnav {
+  position: relative;
   margin-bottom: 27px;
 }
 .mailing-product-ad .wrapper .category-wrap .category-header .upnav h1 a {
@@ -156,14 +157,38 @@ h2.main-title {
   background-image: url(images/logo.png);
   background-repeat: no-repeat;
 }
+.mailing-product-ad .wrapper .category-wrap .category-header .gnb {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 .mailing-product-ad .wrapper .category-wrap .category-header .gnb ul {
   font-size: 0;
 }
 .mailing-product-ad .wrapper .category-wrap .category-header .gnb ul li {
   display: inline-block;
+  margin-left: 16px;
 }
 .mailing-product-ad .wrapper .category-wrap .category-header .gnb ul li a {
   display: block;
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .gnb ul li a span {
+  font-size: 10px;
+  font-weight: 600;
+  color: #313131;
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .gnb ul li .icon {
+  display: block;
+  margin: 0 auto;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .gnb ul li .mysid-link .icon {
+  background-image: url(images/my.png);
+}
+.mailing-product-ad .wrapper .category-wrap .category-header .gnb ul li .category-link .icon {
+  background-image: url(images/category.png);
 }
 .mailing-product-ad .wrapper .category-wrap .category-header .category-nav {
   border-bottom: 1px solid #1b1b1b;
@@ -304,6 +329,12 @@ h2.main-title {
   margin-left: 2px;
   background-image: url(images/apple.png);
 }
+.mailing-product-ad .footer .inner-wrap .copyright {
+  margin-top: 23px;
+  font-size: 11px;
+  color: #898989;
+  text-align: center;
+}
 .mailing-text {
   background-color: #eee;
 }
@@ -386,8 +417,10 @@ h2.main-title {
 }
 .mailing-text .wrapper .mailing-main .text-content .login-details ul li span {
   font-size: 12px;
+  text-transform: capitalize;
 }
 .mailing-text .wrapper .mailing-main .text-content .login-details ul li strong {
+  padding-left: 10px;
   font-weight: 400;
 }
 .mailing-text .wrapper .mailing-main .start-sid {
