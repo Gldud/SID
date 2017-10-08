@@ -17,6 +17,7 @@
     "grunt": "^1.0.1",
     "grunt-contrib-less": "^1.4.1",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-express": "^1.4.1",
     "grunt-font-awesome-vars": "^1.0.1",
     "grunt-serve": "^0.1.6",
     "grunt-spritesmith": "^6.4.0",

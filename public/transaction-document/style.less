@@ -57,11 +57,9 @@ Wrapper
 ========================================================================== */
 
 .ddh_wrapper{
-
-  width: 800px;
-  margin: 100px auto 200px;
-  padding: 30px;
-  border: 2px solid #000;
+  width: 900px;
+  margin: 0 auto;
+  padding: 30px 75px;
 }
 
 /* ==========================================================================
@@ -76,7 +74,7 @@ Main Title
 Top
 ========================================================================== */
 .main-content{
-  margin-top: 80px;
+  margin-top: 75px;
 }
 .top-info{
   position: relative;
@@ -121,21 +119,37 @@ contact point
   .sender-wrap{
     float: left;
     width: 50%;
+    font-size: 11px;
     .sender{
-      font-size: 11px;
+      font-weight: 600;
     }
     .sender-contact{
+      ul{
+        li{
+          &:first-child{
+            font-size: 13px;
 
+          }
+        }
+      }
     }
   }
   .receiver-wrap{
     float: left;
     width: 50%;
+    font-size: 11px;
     .receiver{
-      font-size: 11px;
+      font-weight: 600;
     }
     .receiver-contact{
+      ul{
+        li{
+          &:first-child{
+            font-size: 13px;
 
+          }
+        }
+      }
     }
   }
   &:after {
@@ -148,7 +162,7 @@ contact point
 Payment Detail
 ========================================================================== */
 .payment-detail{
-  margin-top: 60px;
+  margin-top: 50px;
   .pd_left{
     float: left;
     width: 50%;
@@ -186,17 +200,22 @@ Payment Detail
 Terms and Conditions
 ========================================================================== */
 .terms{
-    margin-top: 60px;
+    margin-top: 50px;
+    .terms-wrap{
+      margin-top: 7px;
+    }
   table{
     tr{
       th{
         padding-right: 55px;
+        padding-bottom: 10px;
         font-size: 11px;
         text-align: left;
       }
 
     }
   }
+
   .terms_left{
     float: left;
     width: 50%;
@@ -208,6 +227,11 @@ Terms and Conditions
       tr{
         th{
           vertical-align: top;
+        }
+        td{
+          ul{
+            line-height: 1.1;
+          }
         }
 
       }
@@ -223,7 +247,7 @@ Terms and Conditions
 Table
 ========================================================================== */
 .invoice-table{
-  margin-top: 80px;
+  margin-top: 60px;
   table{
     width: 100%;
     border-collapse: collapse;
@@ -232,31 +256,24 @@ Table
       border-bottom: 1px solid #000;
       tr{
         th{
-          padding: 5px 0;
+          padding: 7px 0;
           text-align: left;
           font-size: 11px;
         }
-
-
+        th.description{
+          width: 320px;
+        }
+        th.price{
+          width: 140px;
+        }
       }
-      &:after{
-        content:"";
-        display: block;
-        width: 100%;
-        height: 1px;
-        position: absolute;
-        top: 3px;
-        left: 0;
-        background-color: #000;
-      }
+
     }
     tbody{
       tr{
         td{
-          padding: 5px 0;
-          &:last-child{
-            text-align: right;
-          }
+          padding: 7px 0;
+
         }
       }
     }
@@ -264,28 +281,26 @@ Table
       tr{
         td{
           padding: 5px 0;
-          &:nth-child(2),
-          &:nth-child(3),
-          &:nth-child(4){
-            border-top: 2px solid #000;
+          border-top: 2px solid #000;
+          &:first-child{
+            border-top: none;
           }
-          &:nth-child(4){
-            text-align: right;
-          }
-
         }
         &:last-child{
-
           td{
-            &:nth-child(2),
-            &:nth-child(3),
-            &:nth-child(4){
-              border-bottom: 2px solid #000;
+            border-bottom: 2px solid #000;
+            &:first-child{
+              border-bottom: none;
             }
           }
         }
       }
-
+      &:before{
+        content: "";
+        display: block;
+        height: 12px;
+        width: 100%;
+      }
     }
   }
 }
@@ -293,26 +308,85 @@ Table
 .signature-wrap{
   position: relative;
   height: 30px;
-  margin-top: 200px;
+  margin-top: 250px;
   .signature{
     position: absolute;
     top: 0;
     right: 0;
-        width: 300px;
-        border-top: 1px solid #000;
+    width: 300px;
+    .sign{
+      padding-bottom: 9px;
+      text-align: right;
+      font-size: 11px;
+      color: #a3a3a3;
+    }
+
+    .signer-wrap{
+      border-top: 1px solid #000;
+      padding-top: 5px;
+      .name{
+        margin-left: 24px;
+        font-size: 11px;
+        color: #a3a3a3;
+      }
+    }
+  }
+}
+
+.signature-wrap_v2{
+
+  margin-top: 250px;
+  .sign{
+    margin-bottom: 3px;
+    padding-bottom: 7px;
+    text-align: center;
+    font-size: 11px;
+    color: #a3a3a3;
+    border-bottom: 1px solid #000;
+  }
+  .signer-wrap{
+    position: relative;
+    .name{
+      position: absolute;
+      top : 0;
+      left: 60px;
+      margin-left: 72px;
+      font-size: 11px;
+      color: #a3a3a3;
+    }
+
+  }
+  .signature_sender{
+    float: left;
+    width: 370px;
+  }
+  .signature_receiver{
+    float: left;
+    width: 370px;
+    margin-left: 10px;
   }
 }
 .invoice-note-wrap{
+  margin-top: 36px;
   table{
     width: 100%;
     border-collapse: collapse;
     tr{
       td{
-        border-bottom: 1px solid #000;
+
+        border-bottom: 1px solid #bfbfbf;
         vertical-align: top;
         strong{
           display: block;
+          font-size: 11px;
         }
+        .contents{
+          padding-left: 5px;
+        }
+      }
+      td.distance{
+        width: 10px;
+        border-bottom: 1px solid transparent;
       }
       th{
         text-align: left;
@@ -325,9 +399,27 @@ Table
   }
   .invoice-note_top{
     border-top: 2px solid #000;
+    table{
+      tr{
+        td{
+          padding: 10px 0 15px;
+        }
+      }
+    }
     .invoice-note_left{
       float: left;
       width: 50%;
+      table{
+        tr{
+          &:nth-child(4),
+          &:nth-child(6){
+            td{
+              width: 50%;
+            }
+
+          }
+        }
+      }
     }
     .invoice-note_right{
       float: left;
@@ -342,6 +434,13 @@ Table
               }
             }
           }
+          .contents_remarks{
+            ul{
+              li{
+                padding-bottom: 15px;
+              }
+            }
+          }
         }
       }
     }
@@ -352,17 +451,33 @@ Table
     }
   }
   .invoice-note_bottom{
+    padding-top: 8px;
     border-top: 2px solid #000;
     table{
       tr{
-        td{
-          border-bottom: none;
+        th{
+          font-size: 11px;
         }
+        th.unit{
+          width: 11%;
+        }
+        th.number{
+          width: 11%;
+        }
+        td{
+          padding: 7px 0;
+          border-bottom: none;
+          &:first-child{
+            padding-left: 5px;
+          }
+        }
+
       }
     }
     tfoot{
       tr{
         td{
+
           border-top: 2px solid #000;
           border-bottom: 2px solid #000;
           &:first-child{
@@ -371,6 +486,12 @@ Table
           }
         }
       }
+      &:before{
+        content: "";
+        display: block;
+        height: 12px;
+        width: 100%;
+      }
 
 
     }
@@ -378,11 +499,12 @@ Table
 }
 
 
+
 /* ==========================================================================
 Bottom
 ========================================================================== */
 .bottom-info{
-  margin-top: 80px;
+  margin-top: 100px;
   font-size: 0;
   .sk-logo{
     display: inline-block;
@@ -410,7 +532,7 @@ Bottom
   }
   .contact-info{
     display: inline-block;
-    margin-left: 45px;
+    margin-left: 70px;
     ul{
       li{
         font-size: 9px;

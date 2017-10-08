@@ -60,10 +60,9 @@ h6 {
 Wrapper
 ========================================================================== */
 .ddh_wrapper {
-  width: 800px;
-  margin: 100px auto 200px;
-  padding: 30px;
-  border: 2px solid #000;
+  width: 900px;
+  margin: 0 auto;
+  padding: 30px 75px;
 }
 /* ==========================================================================
 Main Title
@@ -76,7 +75,7 @@ Main Title
 Top
 ========================================================================== */
 .main-content {
-  margin-top: 80px;
+  margin-top: 75px;
 }
 .top-info {
   position: relative;
@@ -119,16 +118,24 @@ contact point
 .contact-point .sender-wrap {
   float: left;
   width: 50%;
+  font-size: 11px;
 }
 .contact-point .sender-wrap .sender {
-  font-size: 11px;
+  font-weight: 600;
+}
+.contact-point .sender-wrap .sender-contact ul li:first-child {
+  font-size: 13px;
 }
 .contact-point .receiver-wrap {
   float: left;
   width: 50%;
+  font-size: 11px;
 }
 .contact-point .receiver-wrap .receiver {
-  font-size: 11px;
+  font-weight: 600;
+}
+.contact-point .receiver-wrap .receiver-contact ul li:first-child {
+  font-size: 13px;
 }
 .contact-point:after {
   content: "";
@@ -139,7 +146,7 @@ contact point
 Payment Detail
 ========================================================================== */
 .payment-detail {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 .payment-detail .pd_left {
   float: left;
@@ -166,10 +173,14 @@ Payment Detail
 Terms and Conditions
 ========================================================================== */
 .terms {
-  margin-top: 60px;
+  margin-top: 50px;
+}
+.terms .terms-wrap {
+  margin-top: 7px;
 }
 .terms table tr th {
   padding-right: 55px;
+  padding-bottom: 10px;
   font-size: 11px;
   text-align: left;
 }
@@ -184,6 +195,9 @@ Terms and Conditions
 .terms .terms_right table tr th {
   vertical-align: top;
 }
+.terms .terms_right table tr td ul {
+  line-height: 1.1;
+}
 .terms:after {
   content: "";
   display: block;
@@ -193,7 +207,7 @@ Terms and Conditions
 Table
 ========================================================================== */
 .invoice-table {
-  margin-top: 80px;
+  margin-top: 60px;
 }
 .invoice-table table {
   width: 100%;
@@ -204,64 +218,116 @@ Table
   border-bottom: 1px solid #000;
 }
 .invoice-table table thead tr th {
-  padding: 5px 0;
+  padding: 7px 0;
   text-align: left;
   font-size: 11px;
 }
-.invoice-table table thead:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  top: 3px;
-  left: 0;
-  background-color: #000;
+.invoice-table table thead tr th.description {
+  width: 320px;
+}
+.invoice-table table thead tr th.price {
+  width: 140px;
 }
 .invoice-table table tbody tr td {
-  padding: 5px 0;
-}
-.invoice-table table tbody tr td:last-child {
-  text-align: right;
+  padding: 7px 0;
 }
 .invoice-table table tfoot tr td {
   padding: 5px 0;
-}
-.invoice-table table tfoot tr td:nth-child(2),
-.invoice-table table tfoot tr td:nth-child(3),
-.invoice-table table tfoot tr td:nth-child(4) {
   border-top: 2px solid #000;
 }
-.invoice-table table tfoot tr td:nth-child(4) {
-  text-align: right;
+.invoice-table table tfoot tr td:first-child {
+  border-top: none;
 }
-.invoice-table table tfoot tr:last-child td:nth-child(2),
-.invoice-table table tfoot tr:last-child td:nth-child(3),
-.invoice-table table tfoot tr:last-child td:nth-child(4) {
+.invoice-table table tfoot tr:last-child td {
   border-bottom: 2px solid #000;
+}
+.invoice-table table tfoot tr:last-child td:first-child {
+  border-bottom: none;
+}
+.invoice-table table tfoot:before {
+  content: "";
+  display: block;
+  height: 12px;
+  width: 100%;
 }
 .signature-wrap {
   position: relative;
   height: 30px;
-  margin-top: 200px;
+  margin-top: 250px;
 }
 .signature-wrap .signature {
   position: absolute;
   top: 0;
   right: 0;
   width: 300px;
+}
+.signature-wrap .signature .sign {
+  padding-bottom: 9px;
+  text-align: right;
+  font-size: 11px;
+  color: #a3a3a3;
+}
+.signature-wrap .signature .signer-wrap {
   border-top: 1px solid #000;
+  padding-top: 5px;
+}
+.signature-wrap .signature .signer-wrap .name {
+  margin-left: 24px;
+  font-size: 11px;
+  color: #a3a3a3;
+}
+.signature-wrap_v2 {
+  margin-top: 250px;
+}
+.signature-wrap_v2 .sign {
+  margin-bottom: 3px;
+  padding-bottom: 7px;
+  text-align: center;
+  font-size: 11px;
+  color: #a3a3a3;
+  border-bottom: 1px solid #000;
+}
+.signature-wrap_v2 .signer-wrap {
+  position: relative;
+}
+.signature-wrap_v2 .signer-wrap .name {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  margin-left: 72px;
+  font-size: 11px;
+  color: #a3a3a3;
+}
+.signature-wrap_v2 .signature_sender {
+  float: left;
+  width: 370px;
+}
+.signature-wrap_v2 .signature_receiver {
+  float: left;
+  width: 370px;
+  margin-left: 10px;
+}
+.invoice-note-wrap {
+  margin-top: 36px;
 }
 .invoice-note-wrap table {
   width: 100%;
   border-collapse: collapse;
 }
 .invoice-note-wrap table tr td {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #bfbfbf;
   vertical-align: top;
 }
 .invoice-note-wrap table tr td strong {
   display: block;
+  font-size: 11px;
+}
+.invoice-note-wrap table tr td .contents {
+  padding-left: 5px;
+}
+.invoice-note-wrap table tr td.distance {
+  width: 10px;
+  border-bottom: 1px solid transparent;
 }
 .invoice-note-wrap table tr th {
   text-align: left;
@@ -272,8 +338,15 @@ Table
 .invoice-note-wrap .invoice-note_top {
   border-top: 2px solid #000;
 }
+.invoice-note-wrap .invoice-note_top table tr td {
+  padding: 10px 0 15px;
+}
 .invoice-note-wrap .invoice-note_top .invoice-note_left {
   float: left;
+  width: 50%;
+}
+.invoice-note-wrap .invoice-note_top .invoice-note_left table tr:nth-child(4) td,
+.invoice-note-wrap .invoice-note_top .invoice-note_left table tr:nth-child(6) td {
   width: 50%;
 }
 .invoice-note-wrap .invoice-note_top .invoice-note_right {
@@ -284,16 +357,33 @@ Table
   list-style: lower-alpha;
   list-style-position: inside;
 }
+.invoice-note-wrap .invoice-note_top .invoice-note_right table tr .contents_remarks ul li {
+  padding-bottom: 15px;
+}
 .invoice-note-wrap .invoice-note_top:after {
   content: "";
   display: block;
   clear: both;
 }
 .invoice-note-wrap .invoice-note_bottom {
+  padding-top: 8px;
   border-top: 2px solid #000;
 }
+.invoice-note-wrap .invoice-note_bottom table tr th {
+  font-size: 11px;
+}
+.invoice-note-wrap .invoice-note_bottom table tr th.unit {
+  width: 11%;
+}
+.invoice-note-wrap .invoice-note_bottom table tr th.number {
+  width: 11%;
+}
 .invoice-note-wrap .invoice-note_bottom table tr td {
+  padding: 7px 0;
   border-bottom: none;
+}
+.invoice-note-wrap .invoice-note_bottom table tr td:first-child {
+  padding-left: 5px;
 }
 .invoice-note-wrap .invoice-note_bottom tfoot tr td {
   border-top: 2px solid #000;
@@ -303,11 +393,17 @@ Table
   border-top: none;
   border-bottom: none;
 }
+.invoice-note-wrap .invoice-note_bottom tfoot:before {
+  content: "";
+  display: block;
+  height: 12px;
+  width: 100%;
+}
 /* ==========================================================================
 Bottom
 ========================================================================== */
 .bottom-info {
-  margin-top: 80px;
+  margin-top: 100px;
   font-size: 0;
 }
 .bottom-info .sk-logo {
@@ -334,7 +430,7 @@ Bottom
 }
 .bottom-info .contact-info {
   display: inline-block;
-  margin-left: 45px;
+  margin-left: 70px;
 }
 .bottom-info .contact-info ul li {
   font-size: 9px;

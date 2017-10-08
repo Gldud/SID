@@ -34,6 +34,7 @@ module.exports = function(grunt) {
     }
   },
     watch: {
+      options:{livereload:true},
       scripts: {
         files: ['**/*.less'],
         tasks: ['less'],
@@ -48,6 +49,16 @@ module.exports = function(grunt) {
         dest: 'public/market/sprites/sprite.png',
         destCss: 'public/market/less/sprites.less'
       }
+    },
+    express:{
+      all:{
+        options:{
+          port:9000,
+          hostname:'localhost',
+          base: '.',
+          livereload:true
+        }
+      }
     }
 
   });
@@ -55,9 +66,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
-   grunt.loadNpmTasks('grunt-spritesmith');
+  grunt.loadNpmTasks('grunt-express');
+
+
 
   // Default task(s).
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('server', ['express','watch']);
+
 
 };
